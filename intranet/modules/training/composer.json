@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/training",
+    "description": "Training package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Training\\": "src"
+        }
+    }
+}

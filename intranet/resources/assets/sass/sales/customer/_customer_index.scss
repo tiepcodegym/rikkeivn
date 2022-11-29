@@ -1,0 +1,11 @@
+@import "mixins";
+
+.width-5-per {
+	@include width-percent(5% !important);
+}
+.width-10-per {
+	@include width-percent(10% !important);
+}
+.width-15-per {
+	@include width-percent(15% !important);
+}

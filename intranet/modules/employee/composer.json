@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/employee",
+    "description": "Employee package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Employee\\": "src"
+        }
+    }
+}

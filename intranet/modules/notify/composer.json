@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/notify",
+    "description": "Notify package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Notify\\": "src"
+        }
+    }
+}

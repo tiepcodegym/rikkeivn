@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/assets",
+    "description": "Assets package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Assets\\": "src"
+        }
+    }
+}

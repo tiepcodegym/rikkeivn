@@ -1,0 +1,10 @@
+@mixin width($px) {
+	width: $px;
+    min-width: $px;
+    max-width: $px;
+}
+
+@mixin display_flex {
+    display: flex;
+    display: -ms-flexbox;
+}

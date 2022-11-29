@@ -1,0 +1,23 @@
+td {
+    vertical-align: middle;
+    wrap-text: true;
+}
+.sheet-title {
+    font-size: 20;
+    font-weight: bold;
+    text-align: center;
+}
+.part-title {
+    font-weight: bold;
+    color: #B71C1C;
+    font-size: 17;
+}
+.sl-bd {
+    border: 1 solid #000;
+}
+.head-row .sl-bd {
+    font-weight: bold;
+    height: 30;
+    background: #3c8dbc;
+    color: #fff;
+}

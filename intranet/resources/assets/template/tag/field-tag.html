@@ -1,0 +1,59 @@
+<div ng-if="lengthObject(fieldItem)">
+<h3>Quản lý tag: <%= fieldTagsName %></h3>
+<div ng-switch="fieldWrapperUi">
+    <div ng-switch-when="1" data-field-id="<%= fieldActiveId %>">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="title-inline">Tag approve</h4>
+                    <small class="pull-right" style="line-height: 39px;">Click đúp vào label tag để edit</small>
+                </div>
+            </div>
+            <ul class="tag-field-list" data-type="approve" data-color="<%= fieldItem.color  %>"></ul>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="title-inline">Tag review</h4>
+                    <small class="pull-right" style="line-height: 39px;">Click đúp vào tag để link với tag approved</small>
+                </div>
+            </div>
+            <div class="row" ng-if="isShowTagReviewLink">
+                <div class="col-md-12 form-group-select2">
+                    <p class="input-group">
+                        <label class="input-group-addon" ng-bind="trans['Choose alias']"></label>
+                        <select ng-select2
+                            ng-options="item.id as item.value for item in tags.approve track by item.id" ng-model="tagReviewLinkId"
+                            data-s2-etype="reviewLink">
+                        </select>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success" ng-click="tagReviewLinkSubmit()">
+                                <i class="fa fa-floppy-o" ng-if="!tagReviewLinkSubmitProgress"></i>
+                                <i class="fa fa-spin fa-refresh" ng-if="tagReviewLinkSubmitProgress"></i>
+                            </button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <ul class="tag-field-list" data-type="review"></ul>
+        </div>
+    </div>
+    <div ng-switch-when="2" data-field-id="<%= fieldActiveId %>">
+        <div class="row">
+            <div class="col-md-4 margin-bottom-10" 
+                ng-repeat="(index, id) in fieldPath[rootFieldTree][fieldActiveId].child"
+                ng-init="item = fieldPath[rootFieldTree][id]">
+                <a href="#" data-id="<%= id %>" ng-bind="item.data.name"></a>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-default data-field-id="<%= fieldActiveId %>">
+        <p>
+        Field không phải loại tag, hoặc field không phải là field lá (field có con)
+        </p>
+        <p ng-if="fieldTagInfo === true">
+            Note: Field loại <b>info</b>, không thể thay đổi type cho field nay
+        </p>
+    </div>
+</div>
+</div>

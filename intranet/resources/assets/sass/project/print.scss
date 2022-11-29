@@ -1,0 +1,12 @@
+@page {
+    size: A4;
+}
+.page-print-break {
+    display: block; 
+    page-break-before: always;
+}
+.print-wrapper {
+    .col-sm-12 {
+        float: none;
+    }
+}

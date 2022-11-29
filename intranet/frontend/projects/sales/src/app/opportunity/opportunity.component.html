@@ -1,0 +1,293 @@
+<div class="box box-info">
+    <div class="box-body">
+        <div class="container">
+
+            <div class="row" *ngIf="item.id">
+                <div class="col-sm-4 col-md-3" [innerHtml]="renderStatusHtml(oldStatus, opporParams.statusLabels)">
+                </div>
+                <div class="col-sm-8 col-md-9 text-right">
+                    <a *ngIf="opporParams.permissApply" href="view/[[ item.id ]]" target="_blank" class="btn btn-default margin-right-5">[[ trans('Detail') ]]</a>
+                </div>
+            </div>
+
+            <form method="post" [attr.action]="opporParams.saveUrl" id="req_oppor_form" data-required-all="num-emp"
+                  [formGroup]="opporForm">
+
+                <div formGroupName="item" class="item-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('name'); let itemName" >
+                                <label>[[ trans('Request name') ]] <em class="required">*</em></label>
+                                <input type="text" name="name" class="form-control"
+                                       formControlName="name">
+                                <div *ngIf="itemName.invalid && (itemName.dirty || itemName.touched)" class="error">
+                                    <div *ngIf="itemName.errors.required">[[ trans('This field is required') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('code'); let itemCode">
+                                <label>[[ trans('Code') ]] <em class="required">*</em></label>
+                                <input type="text" name="code" class="form-control"
+                                       formControlName="code">
+                                <div *ngIf="itemCode.invalid && (itemCode.dirty || itemCode.touched)" class="error">
+                                    <div *ngIf="itemCode.errors.required">[[ trans('This field is required') ]]</div>
+                                    <div *ngIf="itemCode.errors.codeTaken">[[ trans('This code has already taken') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Priority') ]]</label>
+                                <select name="priority" class="form-control select-search" formControlName="priority">
+                                    <option *ngFor="let priority of opporParams.priorityLabels | keyvalue" [value]="priority.key">
+                                        [[ priority.value ]]
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('status'); let itemStatus;">
+                                <label>[[ trans('Status') ]] <em class="required">*</em></label>
+                                <select name="status" class="form-control select-search" formControlName="status" id="item_status">
+                                    <option *ngFor="let status of opporParams.statusLabels | keyvalue" [value]="status.key">
+                                        [[ status.value ]]
+                                    </option>
+                                </select>
+                                <div *ngIf="itemStatus.invalid && (itemStatus.dirty || itemStatus.touched)" class="error">
+                                    <div *ngIf="itemStatus.errors.required">[[ trans('This field is required') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('duedate'); let itemDuedate">
+                                <label>[[ trans('Deadline') ]] <em class="required">*</em></label>
+                                <input type="text" name="duedate" class="form-control date-picker" data-format="YYYY-MM-DD"
+                                       formControlName="duedate">
+                                <div *ngIf="itemDuedate.invalid && (itemDuedate.dirty || itemDuedate.touched)" class="error">
+                                    <div *ngIf="itemDuedate.errors.required">[[ trans('This field is required') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('duration'); let itemDuration">
+                                <label>[[ trans('Duration') ]] <em class="required">*</em></label>
+                                <input type="text" name="duration" class="form-control" formControlName="duration">
+                                <div *ngIf="itemDuration.invalid && (itemDuration.dirty || itemDuration.touched)" class="error">
+                                    <div *ngIf="itemDuration.errors.required">[[ trans('This field is required') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('sale_id'); let itemSaleId">
+                                <label>[[ trans('Salesperson') ]] <em class="required">*</em></label>
+                                <select name="sale_id" class="form-control select-search" formControlName="sale_id"
+                                        [attr.data-remote-url]="opporParams.saleSearchUrl">
+                                    <option *ngIf="opporParams.currentSale" [value]="opporParams.currentSale.id" selected>
+                                        [[ opporParams.currentSale.name ]]
+                                    </option>
+                                </select>
+                                <div *ngIf="itemSaleId.invalid && (itemSaleId.dirty || itemSaleId.touched)" class="error">
+                                    <div *ngIf="itemSaleId.errors.required">[[ trans('This field is required') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Customer') ]]</label>
+                                <input type="text" name="customer_name" class="form-control" formControlName="customer_name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Detail') ]]</label>
+                                <textarea name="detail" class="form-control text-resize-y" rows="3" formControlName="detail"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Potential') ]]</label>
+                                <textarea name="potential" class="form-control text-resize-y" rows="3" formControlName="potential"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Country') ]]</label>
+                                <select name="country_id" class="form-control select-search has-search"
+                                        formControlName="country_id">
+                                    <option value="">&nbsp;</option>
+                                    <option *ngFor="let country of opporParams.countries | keyvalue" [value]="country.key">
+                                        [[ country.value ]]
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Province/City') ]]</label>
+                                <input type="text" name="location" class="form-control" formControlName="location">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Language') ]]</label>
+                                <select name="lang" class="form-control select-search" formControlName="lang">
+                                    <option value="">&nbsp;</option>
+                                    <option *ngFor="let lang of opporParams.languages | keyvalue" [value]="lang.key">
+                                        [[ lang.value ]]
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>[[ trans('Program language') ]]</label>
+                                <select multiple class="form-control bootstrap-multiselect" style="width: 100%;"
+                                        formControlName="prog_ids" name="prog_ids"
+                                        data-name="prog_ids">
+                                    <option *ngFor="let program of opporParams.programs" [value]="program.id">[[ program.name ]]</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>[[ trans('Note') ]]</label>
+                        <textarea class="form-control text-resize-y" name="note" rows="3" formControlName="note"></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('number_member'); let itemNumMember">
+                                <label>[[ trans('Number of employees') ]] <em class="required">*</em></label>
+                                <input type="number" min="1" max="100" class="form-control" required
+                                       formControlName="number_member">
+                                <div *ngIf="itemNumMember.invalid && (itemNumMember.dirty || itemNumMember.touched)" class="error">
+                                    <div *ngIf="itemNumMember.errors.required">[[ trans('This field is required') ]]</div>
+                                    <div *ngIf="itemNumMember.errors.greaterThan">[[ trans('This field is greater than Number recieved') ]]</div>
+                                    <div *ngIf="itemNumMember.errors.min">[[ trans('This field is greater than 0') ]]</div>
+                                    <div *ngIf="itemNumMember.errors.max">[[ trans('This field is less than 100') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" *ngIf="itemForm.get('number_recieved'); let itemNumRecieved">
+                                <label>[[ trans('Number received') ]] 
+                                    ([[ (itemNumRecieved.value * 100 / itemForm.get('number_member').value) | number: '2.2-2' ]]%)</label>
+                                <input type="number" min="0" class="form-control" formControlName="number_recieved">
+                                <div *ngIf="itemNumRecieved.invalid && (itemNumRecieved.dirty || itemNumRecieved.touched)" class="error">
+                                    <div *ngIf="itemNumRecieved.errors.lessThan">[[ trans('This field is less than Number of employees') ]]</div>
+                                    <div *ngIf="itemNumRecieved.errors.min">[[ trans('This field is greater than 0') ]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="id" formControlName="id">
+                </div>
+
+                <div class="form-group" formArrayName="members" id="list_employees">
+                    <div *ngFor="let member of membersForm.controls; let mIdx = index;"
+                        class="emp-item"
+                        [attr.data-index]="mIdx" [formGroupName]="mIdx">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>[[ trans('Role') ]]</label>
+                                    <select class="form-control select-search has-search" style="width: 100%;"
+                                            formControlName="role" [ngClass]="{'new-select2' : !member.id}"
+                                            data-name="role">
+                                        <option value="">&nbsp;</option>
+                                        <option *ngFor="let role of opporParams.roles" [value]="role.id">[[ role.name ]]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>[[ trans('Expertise level') ]]</label>
+                                    <select class="form-control select-search" style="width: 100%;"
+                                            formControlName="member_exp" [ngClass]="{'new-select2' : !member.id}"
+                                            data-name="member_exp">
+                                        <option value="">&nbsp;</option>
+                                        <option *ngFor="let type of opporParams.typeOptions | keyvalue" [value]="type.key">[[ type.value ]]</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>[[ trans('English level') ]]</label>
+                                    <select class="form-control select-search has-search" style="width: 100%;"
+                                            formControlName="english_level" [ngClass]="{'new-select2' : !member.id}"
+                                            data-name="english_level">
+                                        <option value="">&nbsp;</option>
+                                        <option *ngFor="let level of opporParams.langLevels.en" [value]="level">[[ level ]]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>[[ trans('Japanese level') ]]</label>
+                                    <select class="form-control select-search" style="width: 100%;"
+                                            formControlName="japanese_level" [ngClass]="{'new-select2' : !member.id}"
+                                            data-name="japanese_level">
+                                        <option value="">&nbsp;</option>
+                                        <option *ngFor="let level of opporParams.langLevels.ja" [value]="level">[[ level ]]</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" formControlName="id">
+
+                    </div>
+                </div>
+
+                <div class="row" formGroupName="item">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div><label><input type="checkbox" formControlName="send_mail"> [[ trans('Send mail after save change?') ]]</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <a [attr.href]="opporParams.previousUrl" class="btn btn-lg btn-warning margin-right-5">
+                        <i class="fa fa-long-arrow-left"></i> [[ trans('Back') ]]
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit-oppor" (click)="saveOppor()"
+                            [attr.data-noti]="trans('Submit will send email, are your sure want to continue?')"
+                            [disabled]="loading || opporForm.invalid">
+                        <i class="fa fa-save"></i> [[ trans('Save') ]] 
+                        <i *ngIf="loading" class="fa fa-spin fa-refresh"></i>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

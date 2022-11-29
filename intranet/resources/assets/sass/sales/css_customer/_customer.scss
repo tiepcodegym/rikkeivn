@@ -1,0 +1,728 @@
+@import "variables";
+@import "elements";
+@import "mixins";
+
+/** Common */
+
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif;
+    color: #58595b;
+}
+
+.jumbotron {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.container{
+    @media screen and (max-width: $mediumScreen){
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.content {
+    min-height: 250px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: $mediumScreen){
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+input[type=text] {
+    border-radius: 3px !important;
+}
+
+button {
+    border-radius: 3px !important;
+}
+
+textarea {
+    border-radius: 3px !important;
+}
+
+.modal-body {
+    p {
+        font-size: 15px !important;
+        margin-bottom: 0;
+    }
+}
+
+.loading-img {
+    width: 40px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.font-viet {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/** Welcome */
+.welcome-body{
+    .container-fluid {
+        margin-bottom: 30px;
+    }
+
+    .welcome-header {
+        text-align: center;
+        margin-bottom: 5px;
+        @media screen and (max-width: $mediumScreen){
+            margin-bottom: 15px;
+        }
+        .welcome-title {
+            font-size: 38px;
+            color: $colorGreen;
+            @media screen and (max-width: $mediumScreen){
+                font-size: 33px;
+            }
+        }
+
+    }
+
+    .logo-rikkei {
+        text-align: center;
+        margin-bottom: 10px;
+        img{
+            width: 180px;
+        }
+    }
+
+    .welcome-line{
+        text-align: center;
+        margin-bottom: 0 !important;
+        font-size: $welcomeFontSizeMedium !important;
+        @media screen and (max-width: $mediumScreen){
+            font-size: 14px !important;
+            margin-bottom: 10px !important;
+            text-align: left;
+        }
+    }
+
+    .css-make-info{
+        margin: 30px auto;
+        width: 470px;
+        line-height: 28px;
+        font-size: $welcomeFontSizeNormal;
+        @media screen and (max-width: $mediumScreen){
+            width: 100%;
+            margin: 30px 0;
+            font-size: 14px;
+            margin: 40px 0;
+        }
+        .company-name-title {
+            width: 165px;
+            display: inline-block;
+            float: left;
+            @media screen and (max-width: $mediumScreen){
+                width: 105px;
+            }
+        }
+        .project-name-title {
+            @extend .company-name-title;
+        }
+        .customer-name-title {
+            @extend .company-name-title;
+        }
+        .company-name {
+            width: 300px;
+            word-wrap: break-word;
+        }
+        .project-name {
+            @extend .company-name;
+        }
+        .goto-make-parent{
+            width: 285px;
+            top: 11px;
+            @media screen and (max-width: $mediumScreen){
+                width: 100%;
+            }
+            #make_name {
+                border-radius: 3px 0 0 3px !important;
+            }
+            .btn-to-make {
+                background-color: $colorGreen;
+                border-radius: 0 3px 3px 0 !important;
+                border: none;
+                &:hover {
+                    background-color: #65b769;
+                }
+                img {
+                    height: 22px;
+                }
+            }
+        }
+    }
+    .content-well {
+        padding : 0px 85px;
+        .welcome-line {
+            text-align: justify;
+            padding-bottom: 20px;
+            font-size: 12.82pt!important;
+        }
+        @media screen and (max-width: 768px){
+            padding : 0px 0px;
+            padding-bottom: 0px;
+            .welcome-line {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+/** Make CSS */
+.make-css-page {
+    /*.tooltip {
+        background: rgba(0,0,0,.8);
+        color: #fff;
+        padding: 5px;
+        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all ease-in-out .4s;
+        -o-transition: all ease-in-out .4s;
+        border-radius: 5px;
+        top: -30px;
+        opacity: 1;
+        &:before, &:after {
+            border-width: 6px;
+            margin-top: -6px;
+            position: absolute;
+            right: 50%;
+            top: 36px;
+            border: solid transparent;
+            border-top-color: #000;
+            content: ' ';
+            height: 0;
+            width: 0;
+            pointer-events: none;
+            @include transform(translate(30%, -50%));
+        }
+    }*/
+    @media screen and (min-width: 320px){
+        padding: 0 5px;
+        .modal#modal-confirm-make {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+        }
+        #make-header {
+            text-align: center;
+            .logo-rikkei {
+                float: left;
+                img {
+                    width: 60px;
+                    margin-top: 5px;
+                    @media screen and (min-width: $mediumScreen){
+                        width: 85px;
+                        margin-top: 4px;
+                    }
+                    @media screen and (min-width: $largeScreen){
+                        width: 130px;
+                        margin-top: 8px;
+                    }
+                }
+            }            
+
+            .title {
+                font-size: 19px;
+                margin: 0;
+                color: $colorBlue;
+                font-weight: 700;
+                position: absolute;
+                left: 0;
+                right: 0;
+                font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif;
+                margin-top: 13px;
+                @media screen and (min-width: $mediumScreen){
+                    font-size: 26px;
+                    margin-top: 14px;
+                }
+                @media screen and (min-width: $largeScreen){
+                    font-size: 45px;
+                    margin-top: 20px;
+                }
+            }
+
+            .title-eng {
+                font-size: 11px;
+                @media screen and (min-width: $mediumScreen) {
+                    font-size: 22px;
+                }
+                @media screen and (min-width: $largeScreen) {
+                    font-size: 27px;
+                }
+                @media screen and (min-width: $bigScreen) {
+                    font-size: 40px;
+                }
+            }
+
+            .title-base {
+                color: $colorGreen;
+            }            
+
+            .total-point-container {
+                @include total-point();
+                top: 51px;
+                right: 10px;
+                z-index: 100;
+                @media screen and (min-width: $mediumScreen){
+                    right: 35px;
+                }
+                @media screen and (min-width: $largeScreen){
+                    right: 8%;
+                }
+                .total-point-text {
+                    margin-left: 3px;
+                }
+                .total-point {
+                    font-size: 16px;
+                    margin-left: -2px;
+                    color: $colorBlue;
+
+                    @media screen and (min-width: $mediumScreen){
+                        font-size: 22px;
+                    }
+                    @media screen and (min-width: $largeScreen){
+                        font-size: 40px;
+                    }
+                }
+
+                .total-point-base {
+                    color: $colorGreen;
+                }
+            }
+
+            .total-point-container-base { 
+                background-color: #e9f4e9;
+                border: 1px solid $colorGreen;
+            }
+
+        }
+
+        .project-info {
+            padding: 0 15px;
+            .header {
+                @include project-header();
+                @media screen and (min-width: $largeScreen){
+                    text-align: left;
+                }
+            }
+            .header-base {
+                background-color: $colorGreen;
+            }
+            .row-info {
+                padding: 0 -10px;
+                font-size: 13px;
+                margin-bottom: 2px;
+
+                @media screen and (min-width: $mediumScreen){
+                    margin-bottom: 5px;
+                }
+            }
+            .help {       
+                cursor: pointer;
+                font-size: 20px;
+                right: 13px;
+                position: absolute;
+                top: 3px; 
+                cursor: pointer;
+                @media screen and (min-width: $largeScreen){
+                    font-size: 22px;
+                }
+                 @media screen and (min-width: $bigScreen){
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .project-detail {
+            padding: 0 15px;
+            font-size: 16px;
+
+            .header {
+                @include project-header();
+                margin-bottom: 0;
+                border-radius: 3px 3px 0 0;
+                background-image: none;
+                @media screen and (min-width: $largeScreen){
+                    background-image: url(../../../common/images/white-dot.jpg), url(../../../common/images/white-dot.jpg);
+                    background-repeat: repeat-y;
+                    background-position: 25.666667%, 41.333333%;
+                }
+                .note-comment {
+                    font-size: 9px;
+                    margin-top: 1px;
+                    font-weight: 100;
+                    @media screen and (min-width: $mediumScreen){
+                        font-size: 10px;
+                    }
+                    @media screen and (min-width: $largeScreen){
+                        display: none;
+                    }
+                }
+                .rating-header {
+                    display: none;
+                    @media screen and (min-width: $largeScreen){
+                        display: block;
+                    }
+                }
+                .comment-header {
+                    @extend .rating-header;
+                }
+                .analysis-header {
+                    @extend .rating-header;
+                    height: 39px;
+                    margin-top: -7px;
+                    line-height: 39px;
+                    margin-bottom: -7px;
+                    border-left: 1px solid #FFFFFF;
+                }
+            }
+
+
+            .header-base {
+                background-color: $colorGreen;
+            }
+
+            .root-cate {
+                background-color: $colorLightBlue;
+                padding: 8px 5px;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 3px;
+
+                .note-comment {
+                    float: right;
+                    font-size: 13px;
+                    padding-right: 0;
+                    display: none;
+                    font-weight: 100;
+                    @media screen and (min-width: $largeScreen){
+                        display: block;
+                    }
+                }
+                .help-noti {
+                    padding-top: 3px;
+                    float: none;
+                    display: block;
+                    font-size: 13px;
+                    font-weight: 100;
+                    @media screen and (min-width: $bigScreen){
+                        margin-right: 15px;
+                        float: right;
+                    }
+                }
+                .help-noti-eng {
+                    @media screen and (min-width: $largeScreen){
+                        display:block;
+                        float: none;
+                    }
+                    @media screen and (min-width: $bigScreen){
+                        float: right;
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            .root-cate-first {
+                background-image: none;
+                border-radius: 0 0 3px 3px;
+                @media screen and (min-width: $largeScreen){
+                    background-image: url(../images/white-dot.jpg);
+                    background-repeat: repeat-y;
+                    background-position: 58.3333333%;
+                }
+            }
+
+            .root-cate-base {
+                background-color: $colorLightGreen;
+            }
+
+            .child-cate {
+                padding: 8px 5px;
+                font-size: 15px;
+            }
+
+            .container-question{
+                padding-left: 15px;
+                padding-right: 15px;
+                @media screen and (min-width: $largeScreen){
+                    background-color: #f5f5f7;
+                    margin-top: 1px;
+                    float: left;
+                    width: 100%;
+                    margin-left: 0;
+                    height: 102px;
+                }
+                @media screen and (min-width: $bigScreen){
+                    height: 85px;
+                }
+                .question {
+                    @include question();
+                    white-space: pre-line;
+                }
+
+                .rate {
+                    @include question();
+                    text-align: center;
+                    .tooltip {
+                        white-space: nowrap;
+                        position: absolute;
+                        bottom: 40px;
+                        opacity: 1; z-index: 2001;
+                        border-radius: 3px;
+                        padding: 5px 10px;
+                        background: #000;
+                        color: #fff;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 100%; left: calc(50% - 5px);
+                            border: 4px solid transparent;
+                            border-top-color: #000;
+                            height: 0; width: 0;
+                            pointer-events: none;
+                        }
+                    }
+                }
+
+                .comment {
+                    @include question();
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    .comment-question {
+                        height: 40px;
+                        resize: none;
+                    }
+                }
+            }
+
+            .proposed {
+                height: auto;
+                .question {
+                    @include transform(none);
+                }
+                .comment {
+                    @include transform(none);
+                }
+                .proposed-comment {
+                    textarea {
+                        height: 140px !important;
+                        resize: none;
+                    }
+                }
+            }
+
+            .container-submit {
+                text-align: center;
+                margin: 30px 0;
+                button {
+                    color: #fff;
+                    background-color: $colorBlue;
+                    border: none;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    padding: 5px 15px;
+                }
+
+                button:hover{
+                    background-color: $colorLightBlue;
+                }
+
+                .button-base {
+                    background-color: $colorGreen;
+                }
+
+                .button-base:hover {
+                    background-color: $colorLightGreen;
+                }
+            }
+
+            .show-name-in-cate {
+                @extend .container-question;
+                padding: 13px 20px;
+                font-size: 13px;
+                height: auto;
+            }
+        }
+    }
+    .modal-help {
+        color: #000 !important;
+    }
+    .modal-header-help {
+        background-color: #428bca;
+        color: #fff !important;
+    }
+    .modal-header-help-2 {
+        background-color: #43a047; 
+    }
+    .modal-body-help p{
+        margin-bottom: 10px;
+    }
+}
+
+/** End Make page */
+
+/** Success page */
+
+.success-body{
+    text-align: center;
+    @media screen and (min-width: 320px){
+        img {
+            width: 170px;
+        }
+        .success-action {
+            margin-top: 100px;
+            p {
+                font-size: 19px;
+                @media screen and (min-width: $largeScreen){
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+.welcome-footer{
+    font-size: 10pt;
+    margin-bottom: 10px;
+    color: #939598;
+    .copyright {
+        font-size: $welcomeFontSizeSmall;
+        margin-bottom: 0;
+        @media screen and (max-width: $mediumScreen){
+            width: 100%;
+            text-align: center;
+        }
+        span {
+            color: $colorRed;
+        }
+    } 
+
+    .policy-container{
+        @media screen and (max-width: $mediumScreen){
+            display: none;
+        }
+        .policy {
+            @extend .copyright;
+            .policy-link{
+                font-size: $welcomeFontSizeSmallest;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .policy-mobile-container{
+        display: none;
+        @media screen and (max-width: $mediumScreen){
+            display: block;
+        }
+        .policy {
+            @extend .copyright;
+            @media screen and (max-width: $mediumScreen){
+                float: left;
+                margin-bottom: 10px;
+            }
+            .policy-link{
+                font-size: $welcomeFontSizeSmallest;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.form-sales-module {
+    label.error {
+        position: static;
+        left: inherit;
+    }
+}
+.dropdown-make {
+    position: relative;
+    display: inline-block;
+}
+.make-conten-dropdown {
+    display: none;
+    background: #F5F5F7;
+    position: absolute;
+    min-width: 480px;
+    top: auto;
+    left: -8px;
+    right: 0;
+    padding: 10px;
+    margin-top: 2px;
+    border-radius: 0;
+    box-shadow: 0px 0px 20px;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown {
+    position: relative;
+}
+.detail-conten-dropdown {
+     display: none;
+     background: #FFFFFF;
+     position: absolute;
+     min-width: 600px;
+     top: auto;
+     left: -9px;
+     right: 0;
+     padding: 10px;
+     margin-top: 2px;
+     border-radius: 0;
+     box-shadow: 0px 0px 20px;
+ }
+.comment .comment-question {
+    overflow: hidden;
+}
+.margin-top-13 {
+    margin-top: 13px;
+}
+.link-workorder-css {
+    margin-top: 7px;
+    float: right;
+    color: #58595b;
+}
+.margin-left-25 {
+    margin-left: 25px;
+}
+.link-workorder-filter {
+    margin-right: 25px;
+    color: #58595b;
+}
+p.hint {
+    font-size: 11px;
+    color: #777;
+    text-align: left;
+    display: inline;
+}
+textarea.analysis {
+    margin-top: 16px;
+    height: 40px;
+}
+
+.width-150 {
+    width: 150px;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.analysis-error {
+    font-size: 13px!important;
+}

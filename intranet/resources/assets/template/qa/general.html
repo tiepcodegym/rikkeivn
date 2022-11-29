@@ -1,0 +1,135 @@
+<script type="text/ng-template" id="qa-menu-left.html">
+    <div class="box box-solid">
+        <div class="box-body no-padding">
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-class="{'active': varGlobal.qaMenuLeft == 'cate'}">
+                    <a href="javascript:void(0)" ng-bind="trans['Category']"></a>
+                    <button class="btn btn-primary btn-xs btn-qa-add-cate"
+                        ng-click="funcCateEdit()">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </li>
+                <li ng-class="{'active': varGlobal.qaMenuLeft == 'topic'}">
+                    <a href="javascript:void(0)" ng-bind="trans['Topic']"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="box box-solid" ng-if="pageActive === 'cate'">
+        <div class="box-header with-border">
+            <div class="pull-left">
+                <h4 ng-bind="trans['Choose type']"></h4>
+            </div>
+        </div>
+        <div class="box-body no-padding">
+            <ul class="nav nav-pills nav-stacked" 
+                data-pager="page"
+                data-pager-url="<%= varGlobal.urlQaCateList %>">
+                <li ng-class="{'active': cateActive}">
+                    <a href="javascript:void(0)" ng-bind="trans['Active']" 
+                        ng-click="funcCateList($event, 1)"></a>
+                </li>
+                <li ng-class="{'active': !cateActive}">
+                    <a href="javascript:void(0)" ng-bind="trans['Inactive']" ng-click="funcCateList($event, 0)"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="qa-cate-list.html">
+    <div class="list-group lg-noborder" ng-if="pagerCollection.total && pagerCollection.data">
+        <div class="list-group-item" ng-repeat="item in pagerCollection.data">
+            <div class="row">
+                <div class="col-md-10 col-xs-8">
+                    <h4 class="list-group-item-heading">
+                        <a href="javascript:void(0)" class="margin-right-10">
+                            <i class="fa fa-folder"></i> &nbsp;
+                            <span ng-bind="item.name"></span>
+                        </a>
+                        <a href="javascript:void(0)" ng-click="funcCateEdit(item.id, $event)">
+                            <i class="fa fa-pencil-square"></i>
+                            <i class="fa fa-spin fa-refresh hidden flag-ajax-load"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <div class="cate-meta text-right">
+                        <small ng-bind="item.topic + ' ' + trans['topic']"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-group-item-text">
+                <div class="cate-desc pre-text" ng-moretext="item.content" data-moretext-length="200"></div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="!pagerCollection || !pagerCollection.total || !pagerCollection.data.length" class="text-center">
+        <h2 class="no-result-grid" ng-bind="trans['No results found']"></h2>
+    </div>
+</script>
+
+<script type="text/ng-template" id="qa-cate-edit.html">
+    <div class="modal fade in" id="modal-qa-cate-edit">
+        <div class="modal-dialog">
+            <div class="modal-content row">
+                <form class="form-horizontal" method="post" autocomplete="off"
+                      action="<%= varGlobal.urlQaCateSave %>" id="form-qa-cate-edit"
+                      ng-submit="formQaCateSubmit($event)">
+                    <input type="hidden" name="_token" ng-model="formCateData._token" />
+                    <input type="hidden" name="id" ng-model="formCateData.item.id" />
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title"><%= formCate.titlePopup %></h4>
+                    </div>
+                    <div class="modal-body col-md-12">
+                        <div class="form-group row">
+                            <label for="field-name" class="control-label required col-md-3"><%= trans['Name'] %><em>*</em></label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="field-name" name="item[name]" ng-model="formCateData.item.name" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="field-content" class="control-label required col-md-3"><%= trans['Content'] %><em>*</em></label>
+                            <div class="col-md-9">
+                                <textarea class="form-control text-resize-y" name="item[content]" id="field-content" ng-model="formCateData.item.content"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-select2 row">
+                            <label for="field-active" class="control-label required col-md-3"><%= trans['Active'] %></label>
+                            <div class="col-md-9">
+                                <select name="item[active]" ng-select2
+                                    ng-model="formCateData.item.active" id="field-active"
+                                    data-select2-search="0"
+                                    ng-options="item.value as item.label for item in activeOptions">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-select2 row">
+                            <label for="field-visible" class="control-label required col-md-3"><%= trans['Visible'] %></label>
+                            <div class="col-md-9">
+                                <select name="item[public]" ng-select2
+                                    ng-model="formCateData.item.public" id="field-visible"
+                                    data-select2-search="0"
+                                    ng-options="item.value as item.label for item in visibleOptions">
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn-add margin-right-10" ng-disabled="disabledFormCateData"><%= trans['Save'] %></button>
+                            <button type="button" class="btn btn-default btn-close" data-dismiss="modal"><%= trans['Close'] %></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>

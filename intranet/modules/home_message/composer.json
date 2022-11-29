@@ -1,0 +1,12 @@
+{
+    "name": "rikkei/home_message",
+    "description": "Module home message",
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\HomeMessage\\": "src"
+        }
+    }
+}

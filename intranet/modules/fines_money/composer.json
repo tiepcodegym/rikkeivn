@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/fines-money",
+    "description": "Theo dõi nộp tiền phạt nội quy",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\FinesMoney\\": "src"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+# User specific & automatically generated files #
+#################################################
+/phpunit.xml
+/phpcs.xml
+/vendor
+/vendor_Ex
+*node_modules
+*node_modules_Ex
+/npm-debug.log
+/public/storage
+/public/adminlte
+/database/migrations
+/.env
+/.env_Ex
+/public/media
+/.sonar
+/sonar-project.properties
+/.scannerwork
+/deploy-local.sh
+
+# IDE and editor specific files #
+#################################
+/nbproject
+/.idea
+/modules/sales/.netbeans.xml
+# IDE eclipse
+/.buildpath
+/.project
+/.settings
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.mo
+/public/uploads/
+/public/magazine/yume/
+/public/magazine/tempImage/
+/public/adminer.php
+/public/info.php
+/storage/fonts/*
+/storage/debugbar/
+/storage/app/public/education
+/docker
+/docker-compose.yml
+
+public/phpmyadmin
+composer.lock
+/config/ip_devices.php
+

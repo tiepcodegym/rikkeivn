@@ -1,0 +1,11 @@
+{
+    "name": "rikkei public infomation",
+    "description": "",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\PublicInfo\\": "src"
+        }
+    }
+}

@@ -1,0 +1,234 @@
+.menu-ticket li a.active {
+    border-left: 3px solid #3c8dbc;
+    font-weight: bold;
+}
+
+.ticket-user {
+	font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-left: 50px;
+}
+
+.ticket-time {
+	color: #999;
+    font-size: 12px;
+    display: block;
+    margin-left: 50px;
+}
+
+.image-attachment {
+	margin-bottom: 20px;
+}
+
+.ticket-menu {
+    margin-right: 20px;
+}
+
+.ticket-subject a {
+    color: #000;
+}
+
+.ticket-callout {
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+    padding: 10px 30px 10px 10px;
+    border-left: 5px solid #eee;
+}
+
+.ticket-comment-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: green;
+    padding: 0px 0px 5px 0px;
+    height: 90px;
+}
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.tag{
+  display: inline-block;
+  background: #F95;
+  color: #FFF;
+  padding: 5px 10px;
+  margin:2px 2px 2px 20px;
+  font: normal 16px sans-serif;
+  position: relative;
+  cursor: default;
+  box-shadow:1px 1px 0 rgba(0,0,0,.2);
+}
+
+.tag:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 29px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius:10px 0 0 10px;
+  border-radius:10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+
+.tag:after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFF;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  box-shadow:inset 1px 1px 0 #CCC;
+}
+
+.tag .close_file{
+  top: 6px;
+  position: absolute;
+  background: inherit;
+  left: -3px;
+  z-index: 9999999999999;
+ /* visibility: hidden;*/
+}
+
+.tag:hover .close_file{
+  
+  visibility: visible;
+  cursor:pointer;
+  
+}
+
+.close_file:hover {
+  color: rgba(0,0,0,.5);
+  cursor:pointer;
+}
+
+.ticket-table {
+    table-layout:fixed;
+}
+
+table.ticket-table thead tr th {
+    vertical-align: middle;
+}
+
+.auto-down-line {
+    word-break: break-word; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+table.ticket-table thead tr th:after {
+    vertical-align: middle;
+}
+
+table.ticket-table thead tr th:after {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1540px)
+{
+    table.ticket-table thead tr th {
+        vertical-align: middle;
+    }
+
+    table.ticket-table thead tr th:after {
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    .fixwidth8 {
+      width: 8%;
+    }
+    .fixwidth10 {
+      width: 10%;
+    }
+    .fixwidth12 {
+      width: 12%;
+    }
+    .fixwidth30 {
+      width: 30%;
+    }
+    .fixwidth40 {
+      width: 40%;
+    }
+}
+
+table.ticket-table .ticket-mark {
+    visibility: hidden;
+}
+
+table.ticket-table tr:hover .ticket-mark {
+    visibility: visible;
+}
+
+.tr-mark-unread {
+    font-weight: bold;
+}
+
+.tr-mark-read {
+    font-weight: normal;
+}
+
+.ticket-word-wrap {
+    word-wrap: break-word;
+}
+
+.btn-default {
+    margin-bottom: 5px;
+}
+
+.ticket-label {
+    font-weight: normal;
+}
+
+.ticket-select-search {
+    width: 100%;
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    bottom: auto!important;
+}
+
+.ticket-col-width-25 {
+    width: 25px;
+}
+
+.ticket-col-width-80 {
+    width: 80px;
+}
+
+.ticket-col-width-100 {
+    width: 100px;
+}
+
+.ticket-col-width-120 {
+    width: 120px;
+}
+
+.ticket-col-width-360 {
+    width: 360px;
+}
+
+.ticket-col-width-400 {
+    width: 400px;
+}

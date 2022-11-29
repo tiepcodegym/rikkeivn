@@ -1,0 +1,24 @@
+@media (min-width: $desktop + 1) {
+    .box-body-header.baseline-box {
+        position: relative;
+        .filter-panel-left {
+            position: absolute;
+            right: 5px;
+            top: 0;
+            margin-top: 10px;
+            height: 35px;
+        }
+    }
+    .box-body.box-body-no-padding {
+        padding: 0;
+    }
+}
+@media (max-width: $desktop) {
+    .box-body-header.baseline-box {
+        .filter-panel-left {
+            float: left;
+            text-align: left;
+        }
+    }
+}
+

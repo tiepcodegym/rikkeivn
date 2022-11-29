@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/project",
+    "description": "Project package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Project\\": "src"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/help",
+    "description": "News package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Help\\": "src"
+        }
+    }
+}

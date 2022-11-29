@@ -1,0 +1,77 @@
+#salary_table {
+    border-color: #ddd;
+    thead, tbody {
+        th, td {
+            border-color: #ddd;
+        }
+    }
+    thead {
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+    tbody {
+        tr.sending {
+            td {
+                background-color: #fcf8e3!important;
+            }
+        }
+        tr.active {
+            td {
+                background-color: #d9edf7;
+            }
+        }
+        tr.sent-error {
+            td {
+                background-color: #f2dede;
+            }
+        }
+    }
+}
+
+.box-title {
+    margin-top: 0px;
+}
+
+.group-button {
+    button, a {
+        margin-bottom: 5px;
+    }
+}
+
+.btn-fixed-right {
+    position: fixed;
+    right: 28px;
+    top: 0px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    background: #fff;
+}
+.reponsive-contain {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.multi-select-style {
+    button.multiselect {
+        min-width: 140px;
+    }
+    .multiselect-container {
+        height: 158px;
+        overflow-y: auto;
+    }
+}
+.btn-select-team {
+    .btn-group{
+        width: 100%;
+    }
+    button.btn {
+        width: 100%;
+    }
+    .multiselect-container {
+        height: 250px;
+        width: 100%;
+        overflow-y: auto;
+    }
+}

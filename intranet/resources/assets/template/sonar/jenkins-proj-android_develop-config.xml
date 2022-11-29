@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+    <actions/>
+    <description></description>
+    <keepDependencies>false</keepDependencies>
+    <properties>
+        <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.2">
+            <gitLabConnection>Rikkeisoft Gitlab</gitLabConnection>
+        </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    </properties>
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>git@git.rikkei.org:production/intranet.git</url>
+                <credentialsId>jenkins-server-giangnt2</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>refs/heads/develop</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions/>
+    </scm>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers>
+        <com.dabsquared.gitlabjenkins.GitLabPushTrigger plugin="gitlab-plugin@1.5.2">
+            <spec></spec>
+            <triggerOnPush>true</triggerOnPush>
+            <triggerOnMergeRequest>false</triggerOnMergeRequest>
+            <triggerOnPipelineEvent>false</triggerOnPipelineEvent>
+            <triggerOnAcceptedMergeRequest>false</triggerOnAcceptedMergeRequest>
+            <triggerOnClosedMergeRequest>false</triggerOnClosedMergeRequest>
+            <triggerOpenMergeRequestOnPush>both</triggerOpenMergeRequestOnPush>
+            <triggerOnNoteRequest>false</triggerOnNoteRequest>
+            <noteRegex></noteRegex>
+            <ciSkip>true</ciSkip>
+            <skipWorkInProgressMergeRequest>true</skipWorkInProgressMergeRequest>
+            <setBuildDescription>true</setBuildDescription>
+            <branchFilterType>NameBasedFilter</branchFilterType>
+            <includeBranchesSpec>develop</includeBranchesSpec>
+            <excludeBranchesSpec></excludeBranchesSpec>
+            <targetBranchRegex></targetBranchRegex>
+            <secretToken></secretToken>
+        </com.dabsquared.gitlabjenkins.GitLabPushTrigger>
+    </triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <hudson.plugins.gradle.Gradle plugin="gradle@1.28">
+            <switches></switches>
+            <tasks>sonarqube</tasks>
+            <rootBuildScriptDir></rootBuildScriptDir>
+            <buildFile></buildFile>
+            <gradleName>Gradle auto install</gradleName>
+            <useWrapper>false</useWrapper>
+            <makeExecutable>true</makeExecutable>
+            <useWorkspaceAsHome>false</useWorkspaceAsHome>
+            <wrapperLocation></wrapperLocation>
+            <systemProperties>sonar.projectKey=production:intranet
+                sonar.projectName=Intranet
+                sonar.profile=Rikkei Android way</systemProperties>
+            <passAllAsSystemProperties>false</passAllAsSystemProperties>
+            <projectProperties></projectProperties>
+            <passAllAsProjectProperties>false</passAllAsProjectProperties>
+        </hudson.plugins.gradle.Gradle>
+    </builders>
+    <publishers>
+        <com.dabsquared.gitlabjenkins.publisher.GitLabCommitStatusPublisher plugin="gitlab-plugin@1.5.2">
+            <name>jenkins</name>
+            <markUnstableAsSuccess>false</markUnstableAsSuccess>
+        </com.dabsquared.gitlabjenkins.publisher.GitLabCommitStatusPublisher>
+    </publishers>
+    <buildWrappers>
+        <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.9"/>
+    </buildWrappers>
+</project>

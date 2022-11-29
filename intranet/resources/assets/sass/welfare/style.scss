@@ -1,0 +1,771 @@
+#modal-add-partner {
+    p {
+        font-size: 14px;
+    }
+    em {
+        color: red;
+    }
+    .pull-right {
+        padding-right: 30px;
+    }
+    .modal-header {
+        background-color: #428bca;
+        color: #fff;
+    }
+    .modal-content {
+        padding-bottom: 15px;
+    }
+    .code-partner {
+        label {
+            padding-right: 0px;
+        }
+        .input-box {
+            padding-left: 32px;
+        }
+
+    }
+}
+
+.partner-type-id {
+    .control-label {
+        padding-right: 30px;
+    }
+    .input-box {
+        padding: 0px;
+    }
+}
+
+#partner-group {
+    margin-left: 20px;
+}
+
+.contacts-address-partner {
+    padding-left: 50px;
+}
+
+.tax-code-partner {
+    margin-left: 0px;
+}
+
+.tax-code-partner .input-box {
+    padding: 0px 21px 0px 13px;
+}
+
+.note-partner label {
+    padding-right: 0px;
+}
+
+#list-partner-group {
+    .modal-content {
+        .modal-header {
+            background-color: #428bca;
+            color: #fff;
+            .modal-title {
+                padding: 0px;
+            }
+        }
+        .modal-body {
+            padding: 15px;
+            .col-lg-10 {
+                padding-right: 0px;
+                padding-left: 30px;
+            }
+            .table-partner-group {
+                thead tr {                    
+                    .sorting_1::after {
+                        display: none;
+                    }
+                }            
+                tbody tr td:first-child {
+                    max-width: 328px;
+                    word-break: break-all;
+                }
+            }
+        }
+        .modal-footer {
+            padding-right: 25px;
+        }
+    }
+
+}
+
+#modal-add-partner .modal-dialog,
+#modal-add-partner .modal-content {
+    /* 80% of window height */
+    height: auto;
+    width: 85%;
+    margin: 5px auto;
+}
+
+#modal-delete-partner-group .modal-body {
+    padding: 15px;
+}
+
+#modal-add-partner .modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    padding: 15px;
+    .add-partner-title {
+        margin-bottom: 15px;
+    }
+}
+
+table thead tr {
+    color: #fff;
+}
+
+#modal-list-partner {
+    .modal-header {
+        background-color: #428bca;
+        color: #fff;
+        .modal-title {
+            padding: 0px;
+        }
+    }
+    .modal-body {
+        #table-partner {
+            thead tr {                
+                .sorting_1::after {
+                    display: none;
+                }
+            }
+            tbody tr td {
+                word-break: break-all;
+            }
+            tbody tr td:nth-child(n+5) {
+                text-align: left;
+            }            
+        }
+    }
+}
+
+.welfare-content {
+    fieldset {
+        display: block;
+        -webkit-margin-start: 2px;
+        -webkit-margin-end: 2px;
+        -webkit-padding-before: 0.35em;
+        -webkit-padding-start: 0.75em;
+        -webkit-padding-end: 0.75em;
+        -webkit-padding-after: 0.625em;
+        -moz-margin-start: 2px;
+        -moz-margin-end: 2px;
+        -moz-padding-before: 0.35em;
+        -moz-padding-start: 0.75em;
+        -moz-padding-end: 0.75em;
+        -moz-padding-after: 0.625em;
+        min-width: -webkit-min-content;
+        border-width: 2px;
+        border-style: ridge;
+        border-color: threedface;
+        border-image: initial;
+        padding-right: 0px;
+        margin-top: 1px;
+    }
+    legend {
+        display: block;
+        width: inherit;
+        padding: 3px;
+        margin-bottom: 0px;
+        border-bottom: none;
+    }
+    fieldset tbody, td {
+        padding: 5px;
+        padding-left: 0px !important;
+        /*padding-right: 0px!important;*/
+    }
+    fieldset table {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .disabledbutton {
+        pointer-events: none;
+        opacity: 0.9;
+    }
+}
+.information-partners {
+    .partners-implementation {
+        .col-lg-1 {
+            padding-left: 8px;
+        }
+    }
+    h4 {
+        background-color:#3c8dbc;
+        font-size: 18px;
+        text-align: center;
+        padding: 7px 10px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+}
+.welfare-content {
+    input:first-child {
+        margin-bottom: 10px;
+    }
+    .tab-content {
+        #participants .information-participants {            
+            label {
+                padding-right: 0px;
+            }            
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+    .hint {
+        font-size: 12px;
+        color: #777;
+    }
+    ._uploading {
+        margin-left: 5px;
+    }
+    em {
+        color: red;
+    }
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    background: none;
+}
+
+.welfare-file-upload {
+    .box-info {
+        padding: 20px 30px;
+        .list-file {
+            padding: 20px 0px;
+        }
+        .file-upload {
+            .file .form-group {
+                margin-left: 0px;
+            }
+        }
+    }
+    .modal-body {
+        padding: 15px;
+    }
+}
+
+.wel_organizer {
+    width: 100%;
+    .input-text {
+        float: left;
+        width: 92%;
+        margin-right: 1%;
+    }
+    .button {
+        float: left;
+        width: 4%;
+        text-align: center;
+    }
+}
+
+#organizer {
+    label {
+        padding-top: 0px;
+        margin-bottom: 0px;
+    }
+
+}
+
+.confirm-participation-welfare {
+    .box-info {
+        padding-bottom: 40px;
+    }
+    .content-welfare {        
+        margin-bottom: 20px;
+        .page-main {
+            margin-bottom: 5px;
+        }
+        h4 {
+            background-color: #3c8dbc;
+            font-size: 18px;
+            text-align: center;
+            padding: 7px 10px;
+            margin-top: 0;
+            color: #fff;
+        }
+        .content-welfare-confirm {
+            padding-left: 40px;
+        }
+        .list-attach-fee {
+            ul li {
+                margin-top: 5px;
+            }
+        }
+    }
+    .confirm {
+        margin: 0px 10px 0px 35px;
+        padding: 15px;
+        .disabledbutton {
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        table tbody tr td {
+            cursor: default;
+        }
+        #is_register_relatives {
+            margin-top: 0px;
+            vertical-align: top;
+            position: relative;
+            top: 4px;
+        }
+    }
+    #modal-add-relatives {
+        .box-info {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+#data-table-organizers {
+    .sorting_1 {
+        text-align: center;
+    }
+}
+
+//.modal-body {
+//    padding: 0px;
+//    p {
+//        margin-bottom: 0px;
+//    }
+//}
+
+#addRow {
+    margin-top: 10px;
+}
+
+#modal-add-relatives {
+    .modal-body {
+        padding: 15px;
+        select, .select2-container {
+            margin-bottom: 10px;
+        }
+        .input-attached-gender {
+            margin-bottom: 0px;
+        }
+        .check-allow-import-id {
+            .input-box {
+                input[type=radio] {
+                    margin-top: 0px;
+                    vertical-align: bottom;
+                    position: relative;
+                    top: -3px;
+                }
+                label {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .disabledbutton {
+        pointer-events: none;
+        opacity: 0.8;
+    }
+}
+
+.dataTables_scrollBody, .table-responsive {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.modal-title {
+    padding-bottom: 10px;
+}
+
+//.modal-content {
+//    background-color: #ecf0f5;
+//}
+
+.tab-pane {
+    padding-top: 15px;
+}
+
+table {
+    thead {
+        background: #3c8dbc;
+    }
+    tbody {
+        tr {
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-delete-confirm {
+    p {
+        padding-left: 15px;
+        line-height: 50px;
+    }
+
+}
+
+#send_mail {
+    .modal-body {
+        padding: 15px;
+    }
+}
+#modal-preview-email, #modal-preview-confirm {
+    .modal-content {
+        /* 80% of window height */
+        width: 90%;
+        margin: 0px auto;
+        .modal-body {
+            height: auto;
+            #ifr-preview-mail {
+                width: 100%;
+                min-height: 560px;
+            }
+        }
+        .modal-header {
+            background-color: #428bca;
+            .modal-title {
+                padding: 0px;
+            }
+        }
+    }
+}
+#modal-preview-confirm {
+    #ifr-preview-confirm {
+        width: 100%;
+        min-height: 560px;
+    }
+}
+
+#event_tab {
+    background: #fff;
+}
+
+.confirm-participation-welfare {
+    .text-hint {
+        font-size: 12px;
+    }
+}
+
+#modal-delete-relative-attach, #modal-list-partner {
+    .modal-body {
+        padding: 15px;
+    }
+}
+
+.welfare-file-upload {
+    .box {
+        padding: 0px;
+    }
+}
+
+#save-welfee-more {
+    margin-right: 3px;
+}
+
+#general { 
+    .box-body h4 {
+        background-color: #3c8dbc;
+        font-size: 18px;
+        text-align: center;
+        padding: 7px 10px;
+        margin-top: 0;
+        color: #fff;
+    }
+    #expected_fee, #actual_fee {
+        tr {
+            cursor: default;
+        }
+    }
+    .check-box-allow-attachments {
+        padding-left: 30px;
+    }
+}
+
+input {
+    [readonly] {
+        background-color: transparent;
+        border: 0;
+        font-size: 1em;
+    }
+    [type = checkbox] {
+        margin-left: 5px !important;;
+    }
+}
+
+.input-group-addon {
+    padding: 0px;
+    border: none;
+}
+.button-top{
+    margin-bottom: 10px;
+}
+.event-header {
+    font-size: 15px;
+    .event-status-header {        
+        button {            
+            padding: 10px;
+        }
+        button:first-child {
+            cursor: default;
+            padding: 10px 25px;
+        }
+        .btn-success:first-child {
+            min-width: 134px;
+            min-height: 20px;
+        }
+    }
+    #btn-submit-fake {
+        padding: 10px 25px;
+    }
+}
+.dataTable td{
+    padding-left: 10px!important;
+
+}
+.dataTable td:nth-child(n+5) {
+    text-align: right;
+}
+.event-list {
+    .number, .number-format td:nth-child(2){
+        text-align: right;
+    }
+    .table-grid-data ,.table-responsive table {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+
+    .table-grid-data td:not(:last-child) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .table-grid-data thead {
+        tr th {
+            vertical-align: middle;
+        }
+        .sorting:after, .sorting_asc:after, .sorting_desc:after {
+            top: 16px;
+        }
+    }
+    .table-grid-data tbody tr .wel-time {
+        text-overflow: clip !important;
+        white-space: pre-wrap !important;
+    }
+
+}
+#users-table-emp thead tr th {
+    vertical-align: top;
+}
+.users-table-emp-att {
+    #users-table-emp-att {               
+    }
+    position: relative;
+    z-index: 1000;
+}
+.radmenu {
+    padding: 5px;
+    width: 170px; 
+    border: 1px solid #ccccb3;
+    display: none;
+    visibility: visible; 
+    z-index: 7000;
+    position: absolute;    
+    overflow: hidden;
+    background-color : #fff;
+    ul {
+        padding: 0px;
+        list-style: none;
+        li {
+            padding: 5px;
+            margin: 5px;
+        }
+        li:hover {
+            cursor: pointer;
+            border: 1px solid rgb(250, 253, 187);
+            border-radius: 3px;
+            background-color: rgb(250, 253, 187);
+        }
+    }
+}
+#modal-delete-relative-attached {
+    .modal-body {      
+        padding: 15px;
+    }
+}
+.modal-detail-welfare {
+    .modal-content {
+        padding: 0px;
+        .modal-header {
+            background-color: #428bca;
+            color: #fff;
+            .modal-title {
+                padding: 0px;
+            }
+        }
+        .modal-body {
+            padding: 15px;
+            table tr {
+                td:last-child {
+                    max-width: 275px;
+                    word-break: break-all;
+                }
+            }
+        }
+    }
+    
+    table tr {
+        cursor: default;
+        .description td:first-child {
+            vertical-align: top;
+        }
+        
+    }
+}
+.export-welfare {
+    h4 {
+        background-color:#3c8dbc;
+        font-size: 18px;
+        text-align: center;
+        padding: 7px 10px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    ul li {
+        list-style-type: square;
+    }
+}
+#reset-list-group-welfare, #reset-list-purposes-welfare {
+    margin-right: 11px;
+}
+.error-message {
+    padding: 0px;
+    margin: 0px 0px 20px 0px; 
+}
+#table_group_event, #table_wel_purposes {    
+    tbody tr {
+        td div{
+            max-width: 670px;
+            word-break: break-all;
+        }
+        td:last-child {
+            min-width: 90px;
+        }
+    }
+}
+.select-show-error {
+    display: none;
+}
+#formModalPertnerGroup {
+    padding: 0px 15px;
+}
+#btn-submit {
+    display: none;
+}
+.table-responsive td p {
+    margin: 0px!important;
+}
+.pick-team {
+    padding: 5px !important;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    
+}
+#table-employee tbody tr {
+    cursor: default;
+}
+#table-employee input {
+    cursor: pointer;
+}
+.myModal_group_event {
+    table thead tr {
+        th:last-child {
+            pointer-events: none;
+            cursor: default;                        
+        }
+        .sorting_1::after {
+            display: none;
+        }
+    }
+}
+#modal-add-partner {
+    #note {
+        resize: vertical; 
+    }
+}
+.dataTables_paginate {    
+    .paginate_input {
+        width: 30px;
+        text-align: center;
+    }
+    .paginate_page, .paginate_of {
+        display: none;
+    }
+}
+#partner-fee-return {
+    text-align: right;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.disable_sort::after {
+    display: none !important;
+}
+.select-group-welfare, .select-purpose-welfare {
+    .select2-container {
+        width: 100% !important;
+    }
+    .col-md-1 {
+        padding: 0px 15px 0px 0px;
+    }
+}
+#table_wel_fee_more {
+    tbody tr td:nth-child(3) {
+        text-align: right;
+    }
+    thead tr { 
+        th:last-child {
+            pointer-events: none;
+            cursor: default;
+        }
+        .sorting_1::after {
+            display: none;
+        }
+    }
+}
+.disableMouse {
+    pointer-events: none;
+    opacity: 0.7;
+}
+.dataTables_filter {
+    input[data-index="0"] {
+        -webkit-appearance: none;
+        margin-bottom: 10px;
+    }
+}
+.select-event-team, .partner-type-id {
+    .select2-container {
+        width: 100% !important;
+    }
+}
+.select2-container {
+    span.select2-selection__rendered {
+        padding-left: 0px !important;
+    }
+}
+.select-wel-form-imp-id {
+    padding-left: 8px;
+}
+#modal-delete-confirm {
+    .modal-body {
+        padding: 15px;
+    }
+}
+.format-checkox  {
+    margin-top: 0px;
+    vertical-align: bottom;
+    position: relative;
+    top: -3px;
+}

@@ -1,0 +1,11 @@
+.flash-message {
+  display: none;
+}
+
+.select-full .btn-default {
+  background-color: transparent;
+  &.disabled {
+    background-color: #eee;
+    opacity: 1;
+  }
+}

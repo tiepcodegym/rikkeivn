@@ -1,0 +1,118 @@
+.col-centered{
+    float: none !important;
+    margin: 0 auto;
+}
+.magazine-create-body{
+    padding: 20px 0;
+}
+.magazine-manager-body{
+    padding: 20px;
+    text-align: center;
+}
+.magazine-wrapper{
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+}
+.magazine-wrapper h4{
+    text-align: center;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 35px !important;
+    color: #ea0b0b !important;
+}
+
+.imgPreviewWrap{
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 120px;
+    margin: 0 .8rem;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    margin: 10px;
+}
+.selected{
+    border: red 3px solid;
+}
+.imgPreviewWrap img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 1;
+}
+.imgPreviewWrap .actions{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+}
+#uploadPreview{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    background: #f3f3f3;
+}
+.imgPreviewWrap .action-delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    background: red;
+    color: white;
+    visibility: hidden;
+    padding: 0 8px 2px;
+}
+
+.imgPreviewWrap:hover .action-delete {
+    visibility: visible;
+}
+
+.fileUpload input.upload {
+    display: none;
+}
+/* Just Show slider after load all image, for nicer showing slide */
+.slider {
+    display: none;
+}
+.slider.slick-initialized {
+    display: block;
+}
+#error_box{
+    margin-bottom: 20px;
+}
+#error_box .flash-message{
+    margin-top: 0; padding: 0;
+}
+.rotate-6{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+.rotate-8{
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+}
+.rotate-3{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+

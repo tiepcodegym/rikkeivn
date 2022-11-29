@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/team",
+    "description": "Team package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Team\\": "src"
+        }
+    }
+}

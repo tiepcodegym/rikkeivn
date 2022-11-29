@@ -1,0 +1,15 @@
+@mixin width-percent($width) {
+	width: $width;
+}
+
+@mixin margin-bottom($px) {
+	margin-bottom: $px;
+}
+
+@mixin margin-top($px) {
+	margin-top: $px !important;
+}
+
+@mixin padding-left($px) {
+	padding-left: $px !important;
+}

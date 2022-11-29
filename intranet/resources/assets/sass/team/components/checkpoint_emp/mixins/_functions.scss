@@ -1,0 +1,63 @@
+@mixin project-header() {
+    background-color: $colorBlue;
+    color: #fff;
+    padding: 8px 5px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 3px;
+    @media screen and (min-width: $largeScreen){
+        font-size: 17px;
+    }
+}
+
+@mixin total-point(){
+    float: right;
+    font-size: 7px;
+    padding: 5px 10px 0;
+    text-align: center;
+    background-color: #e2f4fd;
+    border: 1px solid #409dd7;
+    border-radius: 3px;
+    @media screen and (min-width: $mediumScreen){
+        font-size:9px;
+        padding: 5px 15px 0;
+    }
+    @media screen and (min-width: $largeScreen){
+        font-size:13px;
+    }
+}
+
+@mixin question {
+    padding: 5px;
+    background-color: #f5f5f7;
+    margin-top: 1px;
+    border-radius: 3px;
+    font-size: 13px;
+    @media screen and (min-width: $largeScreen){
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .num-border {
+        border: 1px solid #999;
+        border-radius: 50%;
+        font-size: 10px;
+        display: inline-block;
+        height: 17px;
+        width: 18px;
+        text-align: center;
+        position: relative;
+        top: -1px;
+        padding-top: 1px;
+    }
+}
+
+@mixin bgButton($color1, $color2, $color3) {
+    background: #fff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($color1, $color2, $color3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($color1, $color2, $color3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($color1, $color2, $color3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($color1, $color2, $color3); /* Standard syntax */
+}
+

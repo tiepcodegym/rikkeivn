@@ -1,0 +1,2 @@
+<p>Link: <a href="{{ URL::to('project/monthly-evaluation/leader-review')}}" target="_blank">{{ URL::to('project/monthly-evaluation/leader-review')}}</a></p>
+{!! trans('help::seed-view.ME group leader') !!}

@@ -1,0 +1,5 @@
+@mixin managetime-col-width($px) {
+	width: $px;
+    min-width: $px;
+    max-width: $px;
+}

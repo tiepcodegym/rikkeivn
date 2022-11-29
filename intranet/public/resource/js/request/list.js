@@ -1,0 +1,1 @@
+function showChannel(a,n,l){jQuery.ajax({type:"POST",url:n,data:{_token:l,id:a},dataType:"JSON",success:function(a){$("#modal-channel .modal-body").html(a.html),$("#modal-channel").modal("show")}})}

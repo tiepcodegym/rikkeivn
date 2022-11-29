@@ -1,0 +1,10 @@
+{
+    "name": "rikkei/project_point_draf",
+    "description": "Project point draft package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        }
+    }
+}

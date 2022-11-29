@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){selectSearchReload()}),$("#select-team, #select-year").change(function(){var e=$("#select-team").val(),a=$("#select-year").val(),c=baseUrl+"resource/dashboard/index/"+a+"/";0!=e&&(c+=e),location.href=c});

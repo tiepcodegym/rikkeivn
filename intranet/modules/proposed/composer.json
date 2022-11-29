@@ -1,0 +1,12 @@
+{
+    "name": "rikkei/proposed",
+    "description": "proposed",
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Proposed\\": "src"
+        }
+    }
+}

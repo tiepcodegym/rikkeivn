@@ -1,0 +1,41 @@
+.lock {
+  .box {
+    margin-bottom: 1px;
+  }
+
+  .label-status-lock-h {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .status {
+    ul {
+      margin-left: -20px;
+    }
+
+    .tooltip-inner {
+      max-width: 300px;
+      text-align: left;
+    }
+  }
+  .color-red {
+    color: red;
+  }
+  @media screen and (max-width: 768px) {
+    .display-non-mobile {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .with-300 {
+      width: 300px;
+    }
+    .with-250 {
+      width: 250px;
+    }
+    .with-260 {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'Are you sure want to  delete' => '削除したいですか',
+    'An error occurred' =>      'Có lỗi xảy ra, vui lòng thử lại sau!',
+    'confirm_do_action' =>      'Bạn chắc chắn muốn :action?',
+    'Delete successful' =>      '削除されました。',
+    'Do action successful' =>   'Thực hiện thành công',
+    'Document not found' =>     '資料見つけなく',
+    'Comment not found' =>      'Không tìm thấy bình luận',
+    'Create successful' =>      '新作成成功',
+    'Update successful' =>      'アップデート成功',
+    'None item found' =>        'Không có mục nào',
+    'Feedback successful' =>    'フィードバックした',
+    'File upload not allow extension' => 'Không cho phép upload file :mimes',
+    'File does not exist' =>    'File không tồn tại!',
+    'file_max_size' =>          'File không được quá :max KB',
+    'max' => [
+        'file' =>               ':attribute không được vượt quá :max kilobytes.',
+        'string' =>             ':attribute không được vượt quá :max ký tự.',
+    ],
+    'required' =>               ':attribute が必須',
+    'unique' =>                 ':attribute đã tồn tại',
+    'mimes' =>                  ':attribute phải là dạng :mimes',
+    'Please select team or input account' => 'Vui lòng chọn team hoặc nhập thêm tài khoản',
+    'None account valid' =>     'Không có tài khoản nào hợp lệ',
+    'Publish document successful' => 'Publish tài liệu thành công',
+    'Invalid data' =>           'Dữ liệu không đúng!',
+    'Employee had already added' => 'Employee đã được thêm trước đó',
+    'You must input account' => 'Bạn phải nhập tài khoản!',
+    'Please input valid data' => 'データを記入してください',
+    'Can not delete this assignee' => 'Không thể xóa người này!',
+    'Publish document with sending email, are you sure?' => 'Publish tài liệu có gửi email, bạn đã chắc chắn?',
+    'The name field is required' => 'The name field is required',
+];
+

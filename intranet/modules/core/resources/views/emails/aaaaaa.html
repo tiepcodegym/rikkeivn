@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .test-img {
+            /*background-image: url("../../../../../public/event/images/mailHRday.png") ;*/
+            background-image: url("mailHRday.png");
+            background-repeat: no-repeat;
+            background-size: 437px 638px;
+            width: 437px;
+            height: 638px;
+            border: 1px solid red;
+        }
+        .name {
+            top : 189px;
+            font-family: 'Poppins', sans-serif;
+            color: #a83838;
+            left : 160px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div class="test-img">
+    <div>
+        <p class="name">{{ $data['employee_name'] }}</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+$(function(){var t=window.location.href.substr(window.location.href),e=$(".menu-ticket #set_menu").val();t==e&&$(".menu-ticket #menu_all").addClass("active"),$(".menu-ticket li a").each(function(){$(this).attr("href")!=t&&""!=$(this).attr("href")||$(this).addClass("active")})});

@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/managetime",
+    "description": "Manage time package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\ManageTime\\": "src"
+        }
+    }
+}

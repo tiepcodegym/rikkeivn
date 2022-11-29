@@ -1,0 +1,14 @@
+table tr td, table tr th {
+    border: 1px solid #ddd;
+    padding: 3px 6px;
+}
+table .bg-head td, table .bg-head th {
+    background-color: #e5e5e5;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+table tr th {
+    white-space: nowrap!important;
+}

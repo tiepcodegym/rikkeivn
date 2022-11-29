@@ -1,0 +1,51 @@
+$selectTeamColor: #FFF;
+
+form label {
+    font-weight: 600;
+    .required {
+        color: #ff0000;
+    }
+}
+
+.btn-group,
+.btn-group .multiselect,
+ul.multiselect-container {
+    width: 100%!important;
+}
+.btn-group {
+    .multiselect {
+        background: $selectTeamColor;
+        .caret {
+            float: right;
+            margin-top: 7px;
+            margin-right: -5px;
+        }
+        .multiselect-selected-text {
+            float: left;
+        }
+    }
+    .multiselect.disabled {
+        background: #eee!important;
+    }
+    .multiselect:hover {
+        background-color: $selectTeamColor !important;
+    }
+    .multiselect-container {
+        max-height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .active {
+            a {
+                background-color: $selectTeamColor;
+                color : #58595b;
+            }
+        }
+    }
+}
+td .progress{
+    background: #cecece;
+    color: #fff;
+    height: 15px;
+    font-size: 11px;
+    border-radius: 3px;
+}

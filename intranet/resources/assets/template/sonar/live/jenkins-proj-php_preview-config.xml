@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+    <actions/>
+    <description></description>
+    <keepDependencies>false</keepDependencies>
+    <properties>
+        <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.2">
+            <gitLabConnection>Rikkeisoft Gitlab</gitLabConnection>
+        </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    </properties>
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <name>origin</name>
+                <refspec>+refs/heads/*:refs/remotes/origin/* +refs/merge-requests/*/head:refs/remotes/origin/merge-requests/*</refspec>
+                <url>git@git.rikkei.org:production/intranet.git</url>
+                <credentialsId>jenkins-server-giangnt2</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>origin/${gitlabSourceBranch}</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions>
+            <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+            <hudson.plugins.git.extensions.impl.PreBuildMerge>
+                <options>
+                    <mergeRemote>origin</mergeRemote>
+                    <mergeTarget>${gitlabTargetBranch}</mergeTarget>
+                    <mergeStrategy>default</mergeStrategy>
+                    <fastForwardMode>FF</fastForwardMode>
+                </options>
+            </hudson.plugins.git.extensions.impl.PreBuildMerge>
+        </extensions>
+    </scm>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers>
+        <com.dabsquared.gitlabjenkins.GitLabPushTrigger plugin="gitlab-plugin@1.5.2">
+            <spec></spec>
+            <triggerOnPush>false</triggerOnPush>
+            <triggerOnMergeRequest>true</triggerOnMergeRequest>
+            <triggerOnPipelineEvent>false</triggerOnPipelineEvent>
+            <triggerOnAcceptedMergeRequest>false</triggerOnAcceptedMergeRequest>
+            <triggerOnClosedMergeRequest>false</triggerOnClosedMergeRequest>
+            <triggerOpenMergeRequestOnPush>source</triggerOpenMergeRequestOnPush>
+            <triggerOnNoteRequest>true</triggerOnNoteRequest>
+            <noteRegex>rebuild pls</noteRegex>
+            <ciSkip>true</ciSkip>
+            <skipWorkInProgressMergeRequest>false</skipWorkInProgressMergeRequest>
+            <setBuildDescription>true</setBuildDescription>
+            <branchFilterType>All</branchFilterType>
+            <includeBranchesSpec></includeBranchesSpec>
+            <excludeBranchesSpec></excludeBranchesSpec>
+            <targetBranchRegex></targetBranchRegex>
+            <secretToken></secretToken>
+        </com.dabsquared.gitlabjenkins.GitLabPushTrigger>
+    </triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <hudson.plugins.sonar.SonarRunnerBuilder plugin="sonar@2.6.1">
+            <project></project>
+            <properties>sonar.analysis.mode=preview
+                sonar.gitlab.project_id=production/intranet
+                sonar.gitlab.commit_sha=${gitlabMergeRequestLastCommit}</properties>
+            <javaOpts></javaOpts>
+            <additionalArguments></additionalArguments>
+            <jdk>(Inherit From Job)</jdk>
+            <task></task>
+        </hudson.plugins.sonar.SonarRunnerBuilder>
+    </builders>
+    <publishers>
+        <com.dabsquared.gitlabjenkins.publisher.GitLabCommitStatusPublisher plugin="gitlab-plugin@1.5.2">
+            <name>jenkins</name>
+            <markUnstableAsSuccess>false</markUnstableAsSuccess>
+        </com.dabsquared.gitlabjenkins.publisher.GitLabCommitStatusPublisher>
+    </publishers>
+    <buildWrappers>
+        <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.9"/>
+    </buildWrappers>
+</project>

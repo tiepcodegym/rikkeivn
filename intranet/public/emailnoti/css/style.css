@@ -1,0 +1,89 @@
+#getTeamModal .modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+.mail-noti-container {
+    border: 1px solid #ccc; 
+    padding-left: 12px;
+}
+
+#mail_noti_other_search {
+    border: none;
+    width: 250px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    height: 32px;
+}
+
+.mail-noti-container input[type=text] {
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.mail-noti-result {
+    display: block;
+    border: 1px solid #d2d6de;
+    position: absolute;
+    width: 300px;
+    z-index: 999;
+    background-color: #fff;
+    left: 15px;
+    border-radius: 3px;
+}
+
+.mail-noti-item:hover {
+    background-color: #ececec;
+}
+
+.mail-noti-item {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    cursor: default;
+}
+
+.mail-noti-item p {
+    margin-bottom: 0!important;
+}
+
+.mail-noti-set {
+    position: relative;
+    top: 3px;
+    display: none;
+}
+
+.mail-noti-set .vN {
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    cursor: default;
+    display: inline-block;
+    height: 26px;
+    white-space: nowrap;
+    border-radius: 3px;
+    padding: 2px 2px 3px;
+    margin-right: 2px;
+}
+
+.mail-noti-set .vN .vT {
+    display: inline-block;
+    color: #222;
+    margin: 2px 5px;
+    max-width: 325px;
+    max-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    cursor: move;
+}
+
+.mail-noti-set .vN .vM {
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    background: no-repeat url(../../../common/images/contactarea_sprite_2.gif) -4px 0;
+    opacity: .6;
+    vertical-align: top;
+    cursor: pointer;
+}

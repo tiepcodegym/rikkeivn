@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/statistic",
+    "description": "Statistic information",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Statistic\\": "src"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/accounting",
+    "description": "Accounting package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Accounting\\": "src"
+        }
+    }
+}

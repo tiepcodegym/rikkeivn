@@ -1,0 +1,10 @@
+{
+    "name": "rikkei/tag",
+    "description": "Tags Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        }
+    }
+}

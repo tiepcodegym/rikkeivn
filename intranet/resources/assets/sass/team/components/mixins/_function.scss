@@ -1,0 +1,4 @@
+@mixin text-align($align, $color){
+    text-align: $align;
+    color: $color;
+}

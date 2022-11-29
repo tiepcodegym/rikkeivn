@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/ot",
+    "description": "OT package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Ot\\": "src"
+        }
+    }
+}

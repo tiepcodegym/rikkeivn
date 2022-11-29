@@ -1,0 +1,69 @@
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+@mixin transform($trans) {
+    transform: $trans;
+    -webkit-transform: $trans;
+    -moz-transform: $trans;
+    -o-transform: $trans;
+    -ms-transform: $trans;
+}
+
+.img-preview{
+    .thumb{
+        position: relative;
+        width: 74px;
+        margin-right: 20px;
+        img{
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        .del-btn{
+            position: absolute;
+            top: 5px; right: 5px;
+            display: none;
+            border: none;
+            padding: 0px 4px;
+            background: #ff0033;
+            color: #fff;
+            @include border-radius(50%);
+        }
+        &:hover{
+            .del-btn{
+                display: block;
+            }
+        }
+    }
+}
+
+.rotate-6{
+    @include transform(rotate(90deg));
+}
+.rotate-8{
+    @include transform(rotate(-90deg));
+}
+.rotate-3{
+    @include transform(rotate(180deg));
+}
+
+#copy_tooltip{
+    position: absolute;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.8);
+    min-width: 70px;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.modal-warning {
+    .alert-danger {
+        border-color: #f39c12;
+        background: #f39c12!important;
+    }
+}

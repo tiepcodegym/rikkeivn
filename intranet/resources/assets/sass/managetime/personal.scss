@@ -1,0 +1,81 @@
+.font-weight-normal {
+    font-weight: normal;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .box-height-200 {
+        height: 200px;
+    }
+}
+
+.timekeeping-personal-sidebar {
+    overflow: hidden;
+    .salary-menu {
+        .active {
+            font-weight: bold;
+        }
+    }
+    .timekeeping-note-sidebar {
+        .nav-note {
+            li {
+                float: none;
+                a {
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}
+
+.timekeeping-personal-detail {
+    .table-timekeeping-aggregate {
+        width: 100%;
+        @media (min-width: 768px) {
+            max-width: 409px;
+        }
+    }
+    .help {
+        font-size: 15px;
+        position: relative;
+        top: -8px;
+        .help-note {
+            display: none;
+            position: absolute;
+            width: 300px;
+            background: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -73px;
+            z-index: 999;
+            line-height: 20px;
+        }
+        &:hover {
+            .help-note {
+                display: inline-block;
+            }
+        }
+    }
+    .box-note {
+        border: 2px solid #00a7d0;
+        box-shadow: 0 0 3px 1px #00a7d078;
+        padding: 10px 15px 0px 20px;
+    }
+    .color-7d0 {
+        color: #00a7d0;
+        margin-top: 5px;
+    }
+    .mt-0 {
+        margin-top: 0px;
+    }
+    @media (min-width: 991px) {
+        .body-left {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            margin-left: -15px;
+        }
+    }
+}

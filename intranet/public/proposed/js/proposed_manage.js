@@ -1,0 +1,1 @@
+$("#proposedFeedback").on("change",function(e){var r=$("#proposedAnswerContentRequiredLabel"),o=$("#proposedAnswerContent");2==e.target.value?(r.show(),o.attr("required","required")):(r.hide(),o.removeAttr("required"))});

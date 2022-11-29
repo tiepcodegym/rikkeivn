@@ -1,0 +1,220 @@
+.select2-container {
+    width: 100%!important;
+}
+.team-container {
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.btn-group {
+    .btn:first-child {
+        width: 100%!important;
+    }
+    ul.multiselect-container {
+        width: 100%!important;
+        max-height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .multiselect {
+        background: #fff;
+        .multiselect-selected-text {
+            float: left;
+        }
+        .caret {
+            float: right;
+            margin-top: 7px;
+            margin-right: -5px;
+        }
+    }
+
+}
+.request-create-page {
+    input[type=text], input[type=file], textarea, select, .btn-group {
+        width: 93%;
+    }
+    input[type=number] {
+        width: 93%;
+        display: inline-block;
+    }
+    .select2-container {
+        width: 93%!important;
+    }
+    #modal-content {
+        .modal-content {
+            width: 800px;
+        }
+    }
+    
+    .hidden {
+        display: none!important;
+    }
+    textarea {
+       resize: vertical;
+    }
+}
+
+.btn-refresh {
+    height: 35px;
+    padding: 10px;
+    width: 37px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-refresh:before {
+    padding-left: 2px!important;
+}
+
+.label.value {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.resource-dashboard {
+    .effortTable {
+        th {
+            border-bottom-width: 1px !important;
+        }
+        th.account, th.month, th.week {
+            background: #3c8dbc;
+            color: #fff;
+        }
+    }
+    
+    #modal-days {
+        .div-responsive {
+            overflow: auto;
+        }
+        table {
+            thead {
+                th {
+                    min-width: 100px;
+                }
+            }
+        }
+        .tbl-proj-name {
+            position: absolute;
+            width: 250px;
+            z-index: 99;
+            background: #00c0ef;
+        }
+    }
+    
+    .modal.large {
+        .modal-dialog {
+            width: 100%;
+            @media screen and (min-width: $mobileScreen){
+                width: 90%;
+            }
+            @media screen and (min-width: $bigScreen){
+                width: 70%;
+            }
+        }
+        
+    }
+    
+    .effort-container {
+        cursor: pointer;
+    }
+}
+
+.loading-img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 35px;
+}
+
+.list-request-page {
+    .dataTable {
+        table-layout: fixed;
+    }
+}
+
+.request-review-page {
+    .note {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+    }
+    .note-text {
+        position: relative;
+        top: -4px;
+    }
+    table.dataTable {
+        thead {
+            .sorting {
+                background-image: none !important;
+            }
+            .sorting_asc {
+                background-image: none !important;
+            }
+            .sorting_desc {
+                background-image: none !important;
+            }
+        }
+    } 
+}
+/*tooltip at request list*/
+#tooltip-request-list .tooltip .tooltip-inner {
+    font-size: 13px;
+}
+.sum-resource {
+    margin-top:-2%;
+}
+.font-percent-80 {
+    font-size:80%;
+}
+
+.request-review-page {
+    #modal-content {
+        .modal-dialog {
+            width: 800px;
+            .modal-content {
+                width: 100%;
+                .modal-body {
+                    height: 100%;
+                    
+                }
+            }
+        }
+    }
+}
+
+#modal-preview {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .job-detail {
+                   word-wrap: break-word;
+                }
+            }
+        }
+    }
+}
+
+.btn-submit-confirm {
+    margin-right: 20px;
+}
+
+.request-info {
+    div.textarea {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+.item .btn-group .dropdown-menu {
+    min-width: 50px;
+}
+
+.item .button-action {
+    margin-right: 18px;
+}
+
+.item .action-comment {
+    background-color: #ffffff;
+    border: none;
+    font-size: 15px;
+}

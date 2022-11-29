@@ -1,0 +1,51 @@
+/*customize*/
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.post-slide{
+    position: relative;
+}
+.post-slide .post-desc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+.post-slide .post-title{
+    margin: 0 0 5px;
+}
+.post-slide .post-title a{
+    color: #fff;
+}
+.post-slide .post-date{
+    color: #fff;
+    padding: 0;
+}
+.post-slide:hover .post-desc{
+    background: rgba(0, 0, 0, 0.9);
+}

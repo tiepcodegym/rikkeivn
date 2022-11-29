@@ -1,0 +1,1 @@
+$(function(){$(".comelate-upload-file input:file").fileuploader({addMore:!0,extensions:["jpg","jpeg","png","bmp"],captions:{button:function(e){return"Choose image"},feedback:function(e){return text_upload_image}}})});

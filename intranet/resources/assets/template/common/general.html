@@ -1,0 +1,31 @@
+<script type="text/ng-template" id="core-pager.html">
+    <nav aria-label="Page navigation" class="text-center" ng-if="pagerCollection && pagerCollection.is_show_pager">
+        <ul class="pagination">
+            <li ng-if="pagerCollection.is_show_first">
+                <a href="javascript:void(0)" ng-click="pagerClick($event, 1)">
+                    <i class="fa fa-caret-left"></i>
+                    <i class="fa fa-caret-left"></i>
+                </a>
+            </li>
+            <li ng-if="pagerCollection.is_show_prev">
+                <a href="javascript:void(0)" ng-click="pagerClick($event, pagerCollection.current_page - 1)">
+                    <i class="fa fa-caret-left"></i>
+                </a>
+            </li>
+            <li ng-repeat="item in pagerCollection.range" ng-class="{'active': pagerCollection.current_page == item}">
+                <a href="javascript:void(0)"  ng-click="pagerClick($event, item)" ng-bind="item"></a>
+            </li>
+            <li ng-if="pagerCollection.is_show_next">
+                <a href="javascript:void(0)" ng-click="pagerClick($event, pagerCollection.current_page + 1)">
+                    <i class="fa fa-caret-right"></i>
+                </a>
+            </li>
+            <li ng-if="pagerCollection.is_show_last">
+                <a href="javascript:void(0)" ng-click="pagerClick($event, pagerCollection.last_page)">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</script>

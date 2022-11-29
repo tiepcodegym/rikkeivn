@@ -1,0 +1,16 @@
+CKEDITOR.plugins.setLang( 'html5video', 'vi', {
+    button: 'Chèn audio',
+    title: 'Thuộc tính audio',
+    infoLabel: 'Thông tin audio',
+    allowed: 'Cho phép các file: mp3,wav,wma...',
+    urlMissing: 'Đường dẫn audio đang bị thiếu!',
+    videoProperties: 'Audio properties',
+    upload: 'Upload',
+    btnUpload: 'Gửi nó đến server',
+    advanced: 'Advanced',
+    autoplay: 'Autoplay?',
+    yes: 'Yes',
+    no: 'No',
+    responsive: 'Responsive width',
+    orInputUrl: 'Hoặc nhập đường dẫn audio',
+} );

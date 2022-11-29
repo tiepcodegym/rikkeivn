@@ -1,0 +1,65 @@
+<tr data-member-id="">
+    <td ng-bind="projMemberData.key" class="text-right"></td>
+    <td class="form-group-select2">
+        <div class="fg-valid-custom">
+            <select name="type" ng-select2 data-select2-search="0"
+                ng-model="projMember.type">
+                <option ng-repeat="(k, v) in projectData.memberTypes" ng-value="+k">
+                    <%= v %>
+                </option>
+            </select>
+        </div>
+    </td>
+    <td class="form-group-select2">
+        <div class="fg-valid-custom">
+            <select class="select-search" ng-select2 
+                data-select2-model="projMember.employee_id"
+                data-select2-text="projMemberData.account"
+                data-select2-remote-url="<%= varGlobalTag.urlRemoteSearchEmployee %>"
+                data-select2-enforce-focus="1"
+                name="employee_id">
+                <option value="<%= projMember.employee_id %>" selected="selected"
+                    ng-bind="projMemberData.account">
+                </option>
+            </select>
+        </div>
+    </td>
+    <td class="dropdown bst-muls-wrapper">
+        <div ng-class="(projectData.memberTypeAvaiLang.indexOf(projMember.type) > -1) ? '' : 'hidden'">
+            <select name="prog_langs[]" multiple class="hidden bootstrap-multiselect"
+                ng-model="projMember.prog_langs">
+                <option ng-repeat="item in projectItem.lang.ids" ng-value="<%= +item %>"
+                    ng-selected="projMember.prog_langs.indexOf(item) >= 0">
+                    <%= projectData.lang[item] %>
+                </option>
+        </div>
+    </td>
+    <td>
+        <input type="text" class="form-control date" name="start_at" 
+            data-date-format="yyyy-mm-dd" data-date-week-start="1" 
+            data-provide="datepicker" placeholder="YYYY-MM-DD" 
+            data-date-today-highlight="true" value=""
+            id="proj_member-start_at" ng-model="projMember.start_at" />
+    </td>
+    <td>
+        <input type="text" class="form-control date" name="end_at" 
+            data-date-format="yyyy-mm-dd" data-date-week-start="1" 
+            data-provide="datepicker" placeholder="YYYY-MM-DD" 
+            data-date-today-highlight="true" ng-model="projMember.end_at" />
+    </td>
+    <td class="text-right">
+        <input type="text" class="form-control" name="effort" ng-model="projMember.effort" />
+    </td>
+    <td class="text-right pmi-resource" ng-bind="projMemberData.flat_resource">&nbsp;</td>
+    <td>
+        <button class="btn-add type-save" ng-disabled="disabledProjMemberBtn" type="button"
+            ng-click="funcProjMemberSave($event)">
+            <i class="fa fa-floppy-o ajax-main-content"></i>
+            <i class="fa fa-spin fa-refresh hidden ajax-loading"></i>
+        </button>
+        <button class="btn-delete type-cancel" ng-click="funcProjMemberCancel($event)"
+            ng-disabled="disabledProjMemberBtn" type="button">
+            <i class="fa fa-ban"></i>
+        </button>
+    </td>
+</tr>

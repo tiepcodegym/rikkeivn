@@ -1,0 +1,46 @@
+.btn-group-chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.red {
+    color: red;
+}
+.dt-left {
+    border-right: 1px solid #e5e5e5;
+}
+.dt-right{
+    border-left: 1px solid #e5e5e5;
+}
+.box {
+    box-shadow: none;
+}
+
+.sta-normal {
+    .even-clear {
+        clear: both;
+    }
+    .db-company {
+        float: none;
+        margin: 0 auto;
+    }
+}
+.sta-slide {
+    .swiper-slide {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .dt-left {
+        text-align: right;
+        list-style-position: inside;
+    }
+    h4 {
+        font-size: 52px;
+    }
+    h5 {
+        font-size: 35px;
+    }
+    p, a, span {
+        font-size: 28px;
+    }
+}

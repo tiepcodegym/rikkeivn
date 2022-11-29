@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/files",
+    "description": "Files package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Files\\": "src"
+        }
+    }
+}

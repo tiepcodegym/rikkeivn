@@ -1,0 +1,13 @@
+{
+    "name": "rikkei/resource",
+    "description": "Resource management package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {
+    	"maatwebsite/excel": "~2.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Resource\\": "src"
+        }
+    }
+}

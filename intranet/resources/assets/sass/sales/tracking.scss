@@ -1,0 +1,17 @@
+.tracking-page {
+    table {
+        td {
+            max-width: 500px;
+        }
+    }
+
+    #tbl-my-task {
+        td.title {
+            min-width: 300px;
+        }
+    }
+}
+
+.button_tracking {
+    margin: 15px;
+}

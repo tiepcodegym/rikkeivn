@@ -1,0 +1,35 @@
+dev.intranet.prod:
+  hostname: 172.16.18.77
+  user: giangsoda
+  port: 22
+  identityFile: config/giangsoda.pem
+  deploy_path: /var/www/intranet_dev
+  branch: develop
+  stage: dev.intranet.prod
+  roles: app
+  forwardAgent: false
+  multiplexing: false
+
+demo.rikkei.vn:
+  hostname: 139.162.35.130
+  user: giangsoda
+  port: 22
+  identityFile: config/key.pem
+  deploy_path: /path/to/project
+  branch: demo
+  stage: demo.rikkei.vn
+  roles: app
+  forwardAgent: false
+  multiplexing: false
+
+rikkei.vn:
+  hostname: 139.162.35.130
+  user: giangsoda
+  port: 22
+  identityFile: config/key.pem
+  deploy_path: /path/to/project
+  branch: master
+  stage: rikkei.vn
+  roles: app
+  forwardAgent: false
+  multiplexing: false

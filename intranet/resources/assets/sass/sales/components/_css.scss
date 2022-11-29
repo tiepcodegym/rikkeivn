@@ -1,0 +1,890 @@
+@import "mixins/function";
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    button {
+        border-radius: 3px;
+    }
+    input[type=text] {
+        @extend button;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+.content-wrapper {
+    .content-header {
+        padding: 15px 0 0 0;
+        @media screen and (min-width: $largeScreen){
+            padding: 15px 15px 0 15px;
+        }
+        
+    }
+    
+    .content {
+        @extend .content-header;
+        padding-top: 15px;
+        .container {
+            padding: 0;
+            @media screen and (min-width: $largeScreen){
+                padding: 0 15px;
+            }
+        }
+        
+        .box-primary {
+            padding: 0 5px;
+        }
+        
+    }
+}
+
+/**
+* CSS create page
+*/
+
+.datepicker {
+    background-color: #ecf0f5 !important;
+}
+
+.datepicker table tr td.day:hover {
+    background: #fff;
+}
+
+.datepicker-dropdown:before {
+    border-top: 7px solid #ecf0f5 !important;
+}
+
+.datepicker-dropdown:after {
+    border-top: 7px solid #ecf0f5 !important;
+}
+        
+.css-create-page {
+    .select2-selection__rendered {
+        font-size: 14px;
+    }
+    .select2-results__option {
+        font-size: 14px !important;
+    }
+    
+    .css-create-body {
+        padding-right: 15px;
+        padding-left: 15px;
+        input[type=text] {
+            display: inline-block;
+            border-radius: 3px; 
+        }
+        input[type=file] {
+            @extend input[type=text];
+        }
+        
+        .table-bordered {
+            border: 1px solid #ccc;
+            th, td {
+                border: 1px solid #ccc;
+            }
+            @media screen and (min-width: $bigScreen){
+                width: 50%;
+            }
+        }
+        
+        select {
+            display: inline-block;
+            border-radius: 3px; 
+        }
+        
+        .select2-selection__rendered {
+            padding-left: 0 !important;
+        }
+        
+        .form-group {
+            margin-top: 30px;
+        }
+        
+        .sama_label{
+            position: absolute;
+            top: 8px;
+            left: 82%;
+            @media screen and (min-width: $largeScreen){
+                left: 90%;
+            }
+        }
+
+        .radio-inline {
+            padding-left: 0;
+        }
+        
+        .icheckbox-container {
+            width: 100%;
+            display: inline-block;
+        }
+        
+/*        .required {
+            position: absolute;
+            top: 8px;
+            left: 95%;
+        }*/
+        
+        .container-button-css{
+            text-align: center;
+            button{
+                padding: 5px 35px;
+            }
+        }
+        
+        .rikker-relate-container {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding-left: 12px;
+            
+            #rikker_relate {
+                border: none;
+                width: 250px;
+                padding: 0;
+                position: relative;
+                top: 0;
+                height: 32px;
+            }
+            
+            .rikker-relate-update{
+                top: -3px !important;
+                height: 26px !important;
+                margin-top: 5px;
+            }
+            
+            .rikker-set {
+                position: relative;
+                top: 3px;
+                display: none;
+                .vN {
+                    background-color: #f5f5f5;
+                    border: 1px solid #d9d9d9;
+                    cursor: default;
+                    display: inline-block;
+                    height: 26px;
+                    white-space: nowrap;
+                    -webkit-border-radius: 3px;
+                    border-radius: 3px;
+                    padding: 2px 2px 3px 2px;
+                    margin-right: 2px;
+                    .vT {
+                        display: inline-block;
+                        color: #222;
+                        margin: 2px 5px;
+                        max-width: 325px;
+                        max-height: 17px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        direction: ltr;
+                        cursor: move;
+                    }
+
+                    .vM {
+                        display: inline-block;
+                        width: 14px;
+                        height: 20px;
+                        background: no-repeat url(../../../common/images/contactarea_sprite_2.gif) -4px 0;
+                        opacity: .6;
+                        vertical-align: top;
+                        cursor: pointer;
+                    }
+                }
+
+                .error {
+                    background-color: #fff;
+                    border: none;
+                    .vT{
+                        border-bottom: 1px dotted red;
+                    }
+                }
+            }
+        }
+        
+        .rikker-pm-container {
+            @extend .rikker-relate-container;
+            #pm_email {
+                border: none;
+                width: 250px;
+                padding: 0;
+                position: relative;
+                top: 0;
+                height: 32px;
+            }
+            .pm-email-update {
+                top: -3px !important;
+                height: 26px !important;
+            }
+        }
+        
+        .rikker-result {
+            display:none;
+            border: 1px solid #d2d6de;
+            position: absolute;
+            width: 300px;
+            z-index: 999;
+            background-color: #fff;
+            left: 12px;
+            border-radius: 3px;
+            .rikker-item {
+                padding: 5px;
+                float: left;
+                width: 100%;
+                padding: 5px;
+                cursor: default;
+                p {
+                    margin-bottom: 0 !important;
+                }
+            }
+            .rikker-item:hover {
+                background-color: #ececec;
+            }
+            
+            .hovered {
+                background-color: #ececec;
+            }
+        }
+        
+        .tooltip-group {
+            .tooltip {
+                background: rgba(0,0,0,.8);
+                color: #fff;
+                padding: 5px;
+                transition: all ease-in-out .4s;
+                -webkit-transition: all ease-in-out .4s;
+                -moz-transition: all ease-in-out .4s;
+                -o-transition: all ease-in-out .4s;
+                border-radius: 5px;
+            }
+            &:hover {
+                color: #999;
+                .tooltip {
+                    display: block;
+                    z-index: 1050;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        
+        .date {
+            position: relative; 
+            left: -1px;
+            border-radius: 0 4px 4px 0 !important;
+            
+        }
+        
+        #start_date-error {
+            position: absolute;
+            bottom: -27px;
+            left: 0;
+        }
+        
+        #end_date-error {
+            @extend #start_date-error;
+            
+        }
+        
+        #pm_email_validate-error {
+            bottom: -10px !important;
+        }
+        
+        #rikker_relate_validate-error {
+            bottom: -10px !important;
+        }
+        
+        .btn-create {
+            margin: 40px 0;
+        }
+    }
+    
+    .container-fluid .row-fluid button.btn-next{
+        float: right; 
+        background-color: #690F8E; 
+        padding: 3px 28px;
+    }
+
+    /* hien popup chon team vao css */
+    .css-create-page .modal-dialog, .css-update-page .modal-dialog{
+        width: 400px !important;
+    }
+
+    #frm-add-teams{
+        text-align: center;
+    }
+
+    .container-teams{
+        width:200px; 
+        height:300px;
+        background: #6e6e6e;
+        float:left;
+    }
+
+    .btn-add-team{
+        position: relative;
+        top:134px;
+        margin:0 16px; 
+        padding: 5px 15px;
+        border: none;
+        color: #fff;
+        float: left;
+        font-weight: bold;
+        background: -webkit-linear-gradient(#929292, #000); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#929292, #000); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#929292, #000); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#929292, #000); /* Standard syntax */
+    }
+
+    .css-create-page .modal-body, .css-update-page .modal-body{
+        font-size: 12px;
+        overflow-y: auto;
+        height: 400px;
+    }
+
+    
+    
+    .modal-header{
+        background-color:#3c8dbc; 
+        border-bottom: 1px solid #d2d6de !important;
+        .modal-title{
+            color: #fff ;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .modal-footer{
+        border-top: 1px solid #3c8dbc !important;
+        button.create-css{
+            color: #000 ; 
+            font-weight: bold; 
+            background: #e3b019 ; 
+            padding: 3px 25px;    
+            margin-top: 10px;
+        }   
+    }
+
+    .modal-body{
+        ul.list-teams{
+            padding: 10px;
+            list-style: none;
+            text-align: left;
+            color: #fff;
+            font-weight: bold;
+            li{
+                cursor: pointer;
+                padding: 3px;
+            }
+        }
+        .remove-team{
+            margin-bottom: 10px;
+            text-align: right;
+            img{
+                cursor: pointer;
+            }
+        }
+    } 
+
+    .container-date{
+        position: relative;
+        display: inline;
+        #start_date-error{    
+            position: absolute;
+            top:43px;
+            left:0;
+        }
+        #end_date-error{    
+            @extend #start_date-error;
+        }
+    }
+
+    #team_id_check-error{
+        display: block;
+    }
+    
+    #pm_email_check-error {
+        bottom: -8px !important;
+    }
+    
+    #rikker_relate_check-error {
+        bottom: -8px !important;
+    }
+    
+    #pm_email_jp-error {
+        @media screen and (max-width: $mediumScreen){
+            bottom: -43px !important;
+        }
+    }
+}
+
+/**
+* CSS prview page
+*/
+
+.preview-page {
+    padding-bottom: 30px !important;
+    .icheckbox_minimal-blue {
+        margin-top: 7px;
+        float: right !important;
+    }
+    .form-sendmail {
+        margin: 0 auto;
+        @media screen and (min-width: $bigScreen){
+            width: 70%;
+        }
+        @media screen and (min-width: $veryBigScreen){
+            width: 60%;
+        }
+    }
+    .preview-body {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    #link-make {
+        text-align: center;
+        text-decoration: underline;
+        color: #3c8dbc;
+    }
+    
+    .preview-title {
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    
+    .welcome-body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+        .welcome-title {
+            font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+        }
+    }
+    
+    .make-css-page {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+        .title {
+            font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+        }
+    }
+    
+    .btn-update-css {
+        font-size: 18px;
+    }
+}
+
+/**
+* CSS detail page
+*/
+
+.detail-css-page {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+    padding-top: 10px;
+    margin-top: 10px;
+    @media screen and (min-width: $largeScreen){
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    input[type="text"],textarea{
+        font-family: Arial, sans-serif !important;
+    }
+    
+    #make-header {
+        margin-top: 10px;
+        .title {
+            font-size: 17px !important;
+            font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, verdana, "Lucida Grande", "ＭＳ Ｐゴシック", Osaka, Arial, sans-serif !important;
+            @media screen and (min-width: $mediumScreen){
+                font-size: 26px  !important;
+            }
+            @media screen and (min-width: $largeScreen){
+                font-size: 45px  !important;
+            }
+        } 
+        .title-eng {
+            font-size: 13px !important;
+            @media screen and (min-width: $mediumScreen){
+                font-size: 22px  !important;
+            }
+            @media screen and (min-width: $largeScreen){
+                font-size: 33px  !important;
+            }
+        }
+    }    
+}
+
+.team-tree{
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 30px;
+    text-align: left;
+    height: 100%;
+    overflow: auto;
+}
+
+.team-tree li{
+    padding-left: 0;
+}
+
+.team-tree li ul{
+    padding-left: 15px;
+}
+
+.team-tree label{
+    width: 100%;
+}
+
+.team-tree a{
+    color:#fff;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.team-tree ul .team-item{
+
+}
+
+.modal-body .right-list a{
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal-body .right-list label{
+    width:100%;
+}
+
+.required{
+    color:red;
+}
+
+.customer_name_td{
+    position: relative;
+}
+
+.customer_name_td #customer_name{
+    padding-right: 30px;
+}
+
+.rate{
+    text-align: center;
+}
+
+.title-label{
+    width: 90px;
+    display: inline-block;
+}
+
+.label-normal{
+    font-weight: normal;
+}
+
+.iradio-container{
+    padding-right: 30px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.small-title{
+    font-size:15px;
+}
+
+.box-select-question{
+    display: none;
+}
+
+div.theotieuchicauhoi{
+    display:none;
+}
+
+table.tieuchi-theocauhoi .No{
+    width:35px;
+}
+
+table.tieuchi-theocauhoi .question{
+    width:44%;
+}
+
+table.tieuchi-theocauhoi .point{
+    
+}
+
+table.tieuchi-theocauhoi .check{
+    width:40px;
+}
+
+select option.parent{
+    font-weight: bold;
+}
+
+.dataTables_paginate{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.projecttype-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.root-category{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category{
+    font-weight: bold;
+}
+
+.loading-img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 35px;
+}
+
+table tr.loading {
+    height:200px;
+}
+
+.no-result{
+    display: none;
+}
+
+.myHeading{
+    border:none;
+    font: 18px Roboto;
+    padding-left:10%;
+}
+
+
+
+.analyze-body {
+    .analyze-step {
+        border-bottom: 1px solid #ccc;
+        padding: 20px 0;
+        @media screen and (min-width: $bigScreen){
+            border-bottom: none;
+            padding: 0 10px;
+        }
+    }
+    
+    .icheckbox-container {
+        display: inline-block;
+        padding-right: 15px;
+        .icheckbox{
+            display: inline-block;
+        }
+    }
+    ul{
+        list-style: none;
+        label{
+            width:100%;
+        }
+    }
+    
+    .team-container {
+        .list-team-tree{
+            li {
+                list-style: none;
+            }
+
+            ul label {
+                width: 100%;
+            }
+            
+            @media screen and (min-width: $bigScreen){
+                overflow-y: scroll; 
+                height: 573px;
+                margin-top: 30px;
+            }
+            padding-left: 0;
+        }
+    }
+    
+    .range-date-container {
+        
+        .project-date-label {
+            @media screen and (min-width: $bigScreen) {
+                padding-top: 30px;
+            }
+        }
+        #dateRanger {
+            padding-top: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            @media screen and (min-width: $bigScreen) {
+                padding-top: 30px;
+            }
+        }
+    }
+    
+    .project-type-container {
+        margin-top: 20px;
+        @media screen and (min-width: $bigScreen) {
+            margin-top: 30px;
+        }
+        .title-label {
+            display: block;
+            @media screen and (min-width: $mediumScreen) {
+                display: inline-block;
+            }
+        }
+    }
+    
+    .btn-apply{
+        display: none;
+        padding: 6px 25px;
+    }
+
+    .btn-filter{
+        padding: 6px 25px;
+        margin: 40px 0;
+    }
+    
+    .legendColorBox {
+        padding: 10px;
+    }
+    
+    .table-fixed {
+        width: 700px;
+        @media screen and (min-width: $bigScreen) {
+            width: 100%;
+            border-top: 1px solid #f4f4f4;
+        }
+        thead {
+            width: 100%;
+        }
+        tbody {
+            max-height: 250px;
+            overflow-y: auto;
+            width: 100%;
+        }
+        
+        th,td {
+            white-space: normal !important;
+        }
+    }
+    
+    .table-question-fixed{
+        width: 1000px;
+        @media screen and (min-width: $bigScreen) {
+            width: 100%;
+        }
+        
+        tbody {
+            max-height: 200px;
+        }
+        
+        th,td {
+            white-space: normal !important;
+        }
+        
+        td:last-child {
+            padding-left: 7px;
+        }
+    }
+    
+    
+    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+        display: block;
+    }
+    
+    .table-fixed tbody td, .table-fixed thead > tr> th {
+        float: left;
+        border-bottom-width: 0;
+    }
+
+
+    .ketquaapply{
+        display: none;
+        table {
+            th {
+                text-align: center;
+            }
+        }
+    }
+    
+
+    .tbl-criteria{
+        display: none;
+    }
+    
+    
+
+    table.dataTable thead th, table.dataTable thead td {
+        padding: 8px !important;
+        vertical-align: middle;
+        border-bottom: 1px solid #f4f4f4 !important;
+    }
+    .dataTable {
+        table-layout: fixed;
+        width: 600px;
+        @media screen and (min-width: $largeScreen) {
+            width: 100%;
+        }
+        td {
+            word-wrap:break-word;
+        }
+        th,td {
+            white-space: normal !important;
+        }
+    }
+    
+    #danhsachduan th, #duoi3sao th, #danhsachdexuat th{
+        cursor: pointer;
+    }
+}
+
+.list-css-page {
+    .dataTable {
+        th {
+            vertical-align: middle !important;
+            &:after {
+                top: 50% !important;
+                transform: translateY(-50%);
+            }
+        }
+        
+        .filter-grid {
+            width: 100%;
+        }
+    }
+    
+    div.dataTables_paginate {
+        text-align: left;
+    }
+}
+
+.view-css-page {
+    @extend .list-css-page;
+}
+
+#period-checkpoint {
+    border-radius: 3px;
+}
+
+#add-period-checkpoint button.close,  #edit-period-checkpoint button.close {
+    margin-top: -33px;
+}
+
+#form-save-period span.error, #form-edit-period span.error {
+    font-size: 13px;
+    padding-left: 5px;
+}
+.fs-17 {
+    font-size: 17px !important;
+}
+
+.h-35 {
+    height: 35px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.message-select-mail {
+    font-size: 13px;
+    color: red;
+    padding-left: 3px;
+}

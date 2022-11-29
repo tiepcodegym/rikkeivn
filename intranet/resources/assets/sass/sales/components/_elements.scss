@@ -1,0 +1,229 @@
+.text-align-center {
+    text-align: center;
+}
+
+.padding-left-0 {
+    padding-left: 0 !important;
+}
+
+.padding-right-0 {
+    padding-right: 0 !important;
+}
+
+.error {
+    font-size: 14px;
+}
+
+label.error{
+    color:red;
+    font-size: 13px;
+    font-weight: 100;
+    display: inline-block;
+    margin-top: 5px;
+    position: absolute;
+    left: 15px;
+    bottom: -28px;
+}
+
+.width-100 {
+    width: 100px !important;
+}
+
+.width-32 {
+    width: 32px !important;
+}
+
+.width-300{
+    width:325px !important;
+}
+
+.width-93-percent {
+    width: 93% !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-inherit {
+    position: inherit !important;
+}
+
+.position-initial {
+    position: initial !important;
+}
+
+.margin-top-12 {
+    margin-top: 12px !important;
+}
+
+.margin-top-6 {
+    margin-top: 6px !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.margin-right-20 {
+    margin-right: 20px !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px !important;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px !important;
+}
+
+.padding-0 {
+    padding: 0 !important;
+}
+
+.padding-left-5 {
+    padding-left: 5px !important;
+}
+
+.padding-top-20 {
+    padding-top: 20px !important;
+}
+
+.padding-top-30 {
+    padding-top: 30px !important;
+}
+
+.padding-top-50 {
+    padding-top: 50px !important;
+}
+
+.position-reset {
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.top-35 {
+    top: 35px;
+}
+.clear-both {
+    clear: both;
+}
+
+.border-bottom-mobile {
+    @media screen and (max-width: $largeScreen) {
+        border-bottom: 1px solid #ccc;
+    }
+    
+}
+
+.wrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+.modal {
+    color: #58595b !important;
+}
+
+.body-padding {
+    @media screen and (min-width: $largeScreen){
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.display-inline {
+    display: inline !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+@media (max-width: $mobileScreen) {
+    .analyze-body {
+        .box {
+            .box-header {
+                .filter-action {
+                    text-align: left;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $mobileScreen + 1) {
+    .analyze-body {
+        .ketquaapply {
+            .box {
+                .box-header {
+                    .filter-action {
+                        float: right;
+                    }
+                    .box-title {
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-upload {
+    color: #fff;
+    background-color: #d3394c;
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    border-radius: 3px;
+}
+.font-size-14px {
+    font-size: 14px;
+}
+
+.margin-top--15 {
+    margin-top: -15px;
+}
+
+.margin-top--15-md {
+    @media (min-width: $bigScreen) {
+        margin-top: -15px;
+    }
+}
+
+.break-word {
+    word-break: break-all;
+}
+
+.width-170 {
+    width: 170px;
+}
+
+.padding-left-70 {
+    padding-left: 70px;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.left-3 {
+    left: 3px;
+}

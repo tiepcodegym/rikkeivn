@@ -1,0 +1,80 @@
+<div class="row tab-content-loaded">
+    <form id="form-proj-member">
+        <div class="col-md-12">
+            <div class="table-responsive multiselect2-wrapper flag-over-hidden">
+                <table class="table table-bordered table-condensed dataTable tablesorter-blue tablesorter table-proj-members">
+                    <thead>
+                        <tr>
+                            <th width="5%" class="no-sorter text-right"><%= trans['No'] %></th>
+                            <th width="15%"><%= trans['Position'] %></th>
+                            <th width="16%"><%= trans['Account'] %></th>
+                            <th style="min-width: 150px;">
+                                <span data-toggle="tooltip" title="<%= trans['Programming language'] %>"><%= trans['PL'] %></span>
+                            </th>
+                            <th width="17%" style="width: 105px;"><%= trans['Start date'] %></th>
+                            <th width="17%" style="width: 105px;"><%= trans['End date'] %></th>
+                            <th width="9%" class="no-sorter text-right">% <%= trans['Effort'] %></th>
+                            <th width="9%" class="no-sorter text-center">
+                                <span ng-bind="trans['Actual effort']"></span>
+                                (<span ng-bind="getProjTypeResourceEffort()"></span>)</th>
+                            <th width="9%" class="no-sorter" ng-if="isProjEdit">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="(key, item) in projectDataRelate.member" 
+                            data-member-id="<%= item.id %>"
+                            ng-init="funcSetProjMember(item, key)">
+                            <td ng-bind="::projectItemRelate.member[item.id].key"
+                                class="text-right member-key"></td>
+                            <td ng-bind="::projectItemRelate.member[item.id].typeText"></td>
+                            <td ng-bind="::projectItemRelate.member[item.id].account"></td>
+                            <td ng-bind="::projectItemRelate.member[item.id].prog_lang"></td>
+                            <td ng-bind="::projectItemRelate.member[item.id].start_at"></td>
+                            <td ng-bind="::projectItemRelate.member[item.id].end_at"></td>
+                            <td class="text-right" ng-bind="::projectItemRelate.member[item.id].effort"></td>
+                            <td class="text-right" ng-bind="::projectItemRelate.member[item.id].flat_resource"></td>
+                            <td ng-if="isProjEdit">
+                                <button class="btn-add type-edit" type="button"
+                                    ng-disabled="disabledProjMemberBtn"
+                                    ng-click="funcProjMemberAdd($event)">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </button>
+                                <button class="btn-delete type-delete" 
+                                    ng-click="funcProjMemberRemove($event)"
+                                    ng-disabled="disabledProjMemberBtn" type="button">
+                                    <i class="fa fa-trash-o ajax-main-content"></i>
+                                    <i class="fa fa-spin fa-refresh hidden ajax-loading"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-12" ng-if="isProjEdit">
+            <button ng-class=""class="btn-add" ng-click="funcProjMemberAdd($event)"
+                ng-disabled="disabledProjMemberBtn" type="button">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </form>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-center">
+                <button class="btn btn-primary" 
+                    type="button"
+                    ng-click="funcProcessNext('#scope')">
+                    <%= trans['Prev'] %>
+                </button>
+                
+                <button class="btn btn-primary" 
+                    type="button"
+                    ng-click="funcProcessNext('#project-tags')">
+                    <%= trans['Next'] %>
+                </button>
+            </p>
+        </div>
+    </div>
+    
+</div>

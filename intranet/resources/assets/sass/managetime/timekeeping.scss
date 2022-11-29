@@ -1,0 +1,71 @@
+.keeping-aggregate-page {
+    .filter-input-grid {
+        .filter-focus {
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 2px solid #ccc;
+            padding: 10px;
+            top: 2px;
+            left: -69px;
+            width: 200px;
+            select {
+                width: 60px;
+                display: inline;
+            }
+            input {
+                width: 100px;
+                display: inline;
+            }
+        }
+        .left-6 {
+            left: 6px;
+        }
+    }
+    .managetime-table {
+        tr.filter-input-grid {
+            .text-label {
+                padding-left: 3px;
+                padding-right: 3px;
+                text-align: center;
+            }
+        }
+    }
+    .arrow-up {
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #ccc;
+        position: absolute;
+        left: 25px;
+        top: -2px;
+    }
+
+    #datetimepicker-year {
+        width: 150px;
+    }
+
+    #box_search_timekeeping_table {
+        width: 80%;
+    }
+
+    @media (max-width: 991px) {
+        #box_search_timekeeping_table {
+            width: 100%;
+        }
+    }
+
+    .team-select-box {
+        width: 100%;
+    }
+
+    .team-select-box label {
+        margin-right: 10px;
+        margin-top: 8px;
+    }
+
+    .team-select-box .select2.select2-container .select2-selection.select2-selection--single {
+        height: 34px;
+    }
+}

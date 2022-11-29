@@ -1,0 +1,162 @@
+@mixin transform ($trans) {
+    transform: $trans;
+    -webkit-transform: $trans;
+    -moz-transform: $trans;
+    -o-transform: $trans;
+    -ms-transform: $trans;
+}
+
+@mixin transition ($trans) {
+    transition: $trans;
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -o-transition: $trans;
+    -ms-transition: $trans;
+}
+
+.white-space-pre {
+    white-space: pre-line;
+}
+.mgb-10 {
+    margin-bottom: 10px;
+}
+.mgb-30 {
+    margin-bottom: 30px;
+}
+.vote-info {
+    span {
+        font-size: 17px;
+    }
+}
+.nominee {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(20% - 4px);
+    padding-left: 15px; 
+    padding-right: 15px;
+    max-width: 300px;
+    .inner {
+        box-shadow: 0 0 3px #ccc;
+        padding: 10px;
+        background: #fff;
+        @include transition(all ease-in-out 0.3s);
+        @include transform(scale(1));
+        &:hover{
+            @include transform(scale(1.05));
+        }
+    }
+    .nominee-name {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .thumb-box{
+        margin-bottom: 10px;
+    }
+    .vote-box {
+        margin-bottom: 10px;
+    }
+    .nominee-thumb {
+        display: inline-block;
+    }
+    .nominee-desc{
+        min-height: 80px;
+    }
+    .voted {
+        margin-right: 5px;
+        color: #00cc66;
+        display: none;
+    }
+    margin-bottom: 15px;
+}
+.nominee.had_voted {
+    .inner {
+        border: 2px solid #00cc66;
+    }
+    .voted {
+        display: inline-block;
+    }
+}
+
+.more-box {
+    .more-text {
+        display: none;
+    }
+    .more-link {
+        display: inline-block;
+    }
+}
+.more-box.desc_show {
+    .more-text {
+        display: inline;
+    }
+    .more-char, .more-link {
+        display: none;
+    }
+}
+#vote_desc_more .modal-body {
+    word-break: break-all;
+}
+.no-desc {
+    color: #bfbfbf;
+}
+.vote-desc {
+    .more-link {
+        background: transparent;
+        box-shadow: 0 -10px 15px #ccc;
+        padding: 5px;
+        a {
+            padding: 5px 30px;
+        }
+    }
+}
+.vote-content {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.vote-desc.show-full {
+    .vote-content{
+        overflow: visible;
+        max-height: 9999px;
+    }
+    .more-link {
+        box-shadow: none;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .nominee-list {
+        .nominee {
+            width: calc(25% - 4px);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nominee {
+        .nominee-desc {
+            min-height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nominee-list .nominee {
+        width: calc(50% - 4px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nominee-list {
+        .nominee {
+            width: 100%;
+        }
+    }
+    .nominee {
+        .nominee-desc {
+            min-height: 10px;
+        }
+    }
+}

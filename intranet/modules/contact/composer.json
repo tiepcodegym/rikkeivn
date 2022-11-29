@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/contact",
+    "description": "view contact, information of employee",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Contact\\": "src"
+        }
+    }
+}

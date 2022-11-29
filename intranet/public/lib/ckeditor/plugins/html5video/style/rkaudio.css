@@ -1,0 +1,11 @@
+.ckeditor-html5-video {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    float: none!important;
+}
+.ckeditor-html5-video video {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

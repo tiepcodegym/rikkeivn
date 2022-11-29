@@ -1,0 +1,1 @@
+$(document).ready(function(){$.validator.addMethod("checkLevelExist",function(e,l,a){var t=e.split(",");return!checkDuplicate(t)}),$("#frm-lang-level").validate({rules:{name:"required",language_level:{checkLevelExist:!0}},messages:{name:requiredText,language_level:{checkLevelExist:levelDuplicateText}}})});

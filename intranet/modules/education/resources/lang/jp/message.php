@@ -1,0 +1,28 @@
+<?php
+return [
+    'Code education is required' => '教育コードは必須で入力する',
+    'This code education is exist' => '教育コードがすでに存在しました',
+    'This code education max length 2' => '教育コードは最大で2文字です',
+    'This code education not numberic' => '教育コードは数字ではありません',
+    'The name is required' => '教育タイプ名称は必須で入力する',
+    'The description is required' => '内容は必須で入力する',
+    'The email is required' => 'メールは必須で入力する',
+    'The email is exist' => 'メールはすでに存在しました',
+    'Unlike the format like mail@rikkeisoft.com' => 'email@rikkeisoft.comの形式で正しくありません',
+    'Create successful' => '登録が成功しました',
+    'Delete successful' => '解消が成功しました',
+    'complete' => '完了',
+    'create_new' => '新規作成',
+    'register' => '登録',
+    'open' => 'オーペン',
+    'pending' => '保留中',
+    'closed' => '終了',
+    'student' => '学習者',
+    'lecturers' => '教師',
+    'This name education max length 255' => '教育名は最大で255文字です',
+    'The form of vocational training applies only to 1 classroom and 1 shift' => 'The form of vocational training applies only to 1 classroom and 1 shift',
+    'The formality not exists' => 'The formality not exists',
+    'Unable to identify the recipient' => 'Unable to identify the recipient',
+    'This name education max length 255' => '教育名は最大で255文字です',
+    'Register_successful' => '登録成功'
+];

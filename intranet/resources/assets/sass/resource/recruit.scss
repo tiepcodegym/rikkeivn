@@ -1,0 +1,144 @@
+@import "components/_elements.scss";
+
+.bold-label{
+    font-weight: 700;
+}
+
+.input-edit{
+    vertical-align: middle;
+    .value{
+        height: 34px;
+        text-align: right;
+        padding-top: 5px;
+    }
+    input, .value{
+        min-width: 65px;
+    }
+    input[type="number"]{
+        appearance: none;
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+        -o-appearance: none;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+#submit_plan {
+    background: #286090;
+    border-color: #204d74;
+}
+
+table.statistics-table{
+    thead tr th{
+        text-align: center;
+        padding-right: 8px;
+    }
+    tr td{
+        text-align: right;
+    }
+    tr td.text-left{
+        text-align: left;
+    }
+    tr td.text-center{
+        text-align: center;
+    }
+}
+table.table-grid-data {
+    >thead>tr>th {
+        vertical-align: middle;
+    }
+}
+
+.nowwrap{
+    white-space: nowrap;
+}
+.prewrap{
+    white-space: pre-wrap;
+}
+.padding-lr-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.padding-lr-0{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.sm-label {
+    text-align: right;
+}
+
+label[for] {
+    cursor: default;
+}
+
+.recruiter-select {      
+    div {
+        .year-label{
+            width: 75px;
+        }
+    }
+    div {
+        .recruiter-label {
+            width: 150px;
+        }
+    }
+    div {
+        select {
+            width: 350px !important;
+        }        
+    }
+}
+.recruit-tabs {
+    .tooltip-inner {
+        min-width: 200px!important;
+    }
+}
+
+.fixed-container {
+    .fixed-table {
+        border: 1px solid #ababab!important;
+        tr td, tr th {
+            border: 1px solid #ababab!important;
+        }
+    }
+}
+
+.prog-bg {
+    background: #C9DAF8;
+}
+
+.filter-wrapper {
+    .multiselect-container {
+        height: 320px;
+        overflow-y: auto;
+    }
+}
+
+#btn_export_stats_detail + .tooltip {
+    .tooltip-inner {
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nopadding-row{
+        .nopadding-col{
+            &:first-child{
+                padding-right: 0;
+            }
+            &:last-child{
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sm-label {
+        text-align: left;
+    }
+}

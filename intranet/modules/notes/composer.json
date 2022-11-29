@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/notes",
+    "description": "notes package for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Notes\\": "src"
+        }
+    }
+}

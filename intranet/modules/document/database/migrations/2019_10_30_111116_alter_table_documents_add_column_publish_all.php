@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class AlterTableDocumentsAddColumnPublishAll extends Migration
+{
+    protected $tbl = 'documents';
+    protected $col = 'publish_all';
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        if (!Schema::hasTable($this->tbl) || Schema::hasColumn($this->tbl, $this->col)) {
+            return;
+        }
+        Schema::table($this->tbl, function (Blueprint $table) {
+            $table->boolean($this->col)->after('publisher_id')->default(0);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

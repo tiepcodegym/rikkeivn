@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/contract",
+    "description": "Team contract for Rikkei Intranet",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Contract\\": "src"
+        }
+    }
+}

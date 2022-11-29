@@ -1,0 +1,15 @@
+.list-group.lg-noborder {
+    .list-group-item {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0;
+    }
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+}
+.btn-qa-add-cate {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+}

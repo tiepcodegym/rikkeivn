@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/admin_setting",
+    "description": "Admin setting",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\AdminSetting\\": "src"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+$.fn.preSaveProcessing=function(){$(this).click(function(){""!=$("#recruiterList").val()?$("#update-confirm").modal("show"):$(".errTxt").html(" "+errMsg).delay(2e3).fadeOut()}),$("button#accept").click(function(){$("#update-recruiter").submit()})};

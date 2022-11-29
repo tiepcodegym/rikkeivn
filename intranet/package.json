@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch",
+    "prod-watch": "gulp watch --production"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "es6-promise": "^4.2.8",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.11",
+    "laravel-elixir": "^6.0.0-18",
+    "laravel-elixir-webpack-official": "^1.0.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "gulp-install": "^1.1.0",
+    "natives": "^1.1.6",
+    "yarn": "^1.17.3"
+  }
+}

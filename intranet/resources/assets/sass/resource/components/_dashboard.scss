@@ -1,0 +1,135 @@
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../../../common/images/Preloader_11.gif) center no-repeat #fff;
+}
+
+.table-left {
+    position: absolute;
+    /* left: 10px; */
+    width: 250px;
+    z-index: 99;
+    background: #fff;
+}
+
+.loader-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #999;
+    opacity: .5;
+    left: 0;
+    z-index: 999;
+    right: 0;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    z-index: 999;
+    left: 45%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.notice-color {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.resource-dashboard {
+    .effortTable {
+        thead {
+            th {
+                min-width: 105px;
+            }
+        }
+    }
+    .btn-viewmode {
+        .btn {
+            border-radius: 0 !important;
+        }
+    }
+    .select2-selection {
+        border-radius: 3px!important;
+    }
+    .btn-group {
+        width: 100%!important;
+        .btn:first-child {
+            width: 100%!important;
+        }
+        ul.multiselect-container {
+            width: 100%!important;
+            max-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .multiselect {
+            background: #fff;
+            .multiselect-selected-text {
+                float: left;
+            }
+            .caret {
+                float: right;
+                margin-top: 7px;
+                margin-right: -5px;
+            }
+        }
+        
+    }
+    .box-header {
+        .box-title {
+            display: block;
+            margin-bottom: 3px;
+        }
+        .note {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: bold;
+            color: #999;
+        }
+    }
+    
+    .column-right {
+        .box-info {
+            @media screen and (min-width: $bigScreen){
+                height: 14vw;
+            }
+        }
+    }
+    
+    .effort-container {
+        .tooltip {
+            display: none;
+            opacity: 1;
+            background: rgba(0,0,0,.8);
+            color: #fff;
+            padding: 5px;
+            transition: all ease-in-out .4s;
+            -webkit-transition: all ease-in-out .4s;
+            -moz-transition: all ease-in-out .4s;
+            -o-transition: all ease-in-out .4s;
+            border-radius: 5px;
+        }
+    }
+    
+    .current {
+        background: #ff8293 !important;
+    }
+}

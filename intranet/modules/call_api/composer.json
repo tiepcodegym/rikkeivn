@@ -1,0 +1,11 @@
+{
+    "name": "rikkei/call_api",
+    "description": "Call api to another system",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\CallApi\\": "src"
+        }
+    }
+}

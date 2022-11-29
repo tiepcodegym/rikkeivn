@@ -1,0 +1,29 @@
+<div class="modal fade" id="modal_edit_proj_tag">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="post" ng-submit="saveProjTag($event)" id="project_tags_form">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="dismissModal($event)" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><%= trans['Edit tags'] %> - <%= editItem.name %></h4>
+                </div>
+                
+                <div class="modal-body">
+                    
+                    <div ng-include="'tag_template.html'"></div>
+                    
+                </div>
+                
+                <div class="modal-footer">
+                    <input type="hidden" class="project-id" name="project_id" value="">
+                    <input type="hidden" class="list-tags" name="list_tags" ng-model="listTags" value="">
+                    <button type="button" ng-click="dismissModal($event)" class="btn" data-dismiss="modal">&times; <%= trans['Cancel'] %></button>
+                    <button type="submit" class="btn-edit" ng-disabled="savingTags" 
+                            ng-if="fieldSelected && (globTag.permissApprove || editItem.tag_status != globTag.PROJ_STT_APPROVE)">
+                        <i class="fa fa-save"></i> <%= trans['Save'] %> 
+                        <i class="fa fa-spin fa-refresh" ng-show="savingTags"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

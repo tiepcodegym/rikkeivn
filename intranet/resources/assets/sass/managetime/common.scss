@@ -1,0 +1,343 @@
+@import "mixins";
+@import "vars";
+
+.post {
+    color: #444 !important;
+}
+
+.user-block .username {
+    font-size: 15px !important;
+    font-weight: 600;
+    color: #666 !important;
+}
+
+.user-block .description {
+    font-size: 12px !important;
+    color: #666 !important;
+}
+
+.post .user-block {
+    margin-bottom: 8px !important;
+}
+
+.managetime-menu-title {
+    margin-right: 20px;
+}
+
+.managetime-box-title {
+    font-size: 21px !important;
+}
+
+.managetime-menu .active {
+    border-left: 3px solid #3c8dbc;
+    font-weight: bold;
+}
+
+.managetime-form-group {
+    margin-bottom: 15px;
+}
+
+.managetime-select-2 {
+    width: 100%;
+}
+
+.managetime-form-group .select2-container {
+    min-width: 100%;
+}
+
+.managetime-textarea {
+    min-height: 100px !important; 
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.managetime-label {
+    font-weight: normal !important;
+}
+
+.managetime-error {
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    display: none;
+}
+
+.managetime-table {
+    table-layout: fixed;
+}
+
+.managetime-read-more{
+    max-width: 200px;
+}
+
+table thead tr th {
+    vertical-align: middle !important;
+}
+
+table thead tr th:after {
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1540px)
+{
+    table thead tr th {
+        vertical-align: middle !important;
+    }
+
+    table thead tr th:after {
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    bottom: initial !important;
+}
+
+#managetime_table_fixed {
+    background-color: #d9edf7;
+    overflow: auto;
+    margin-top: 0px !important;
+    z-index: 999;
+    position: relative;
+    display: none;
+}
+
+.managetime-thead {
+    background-color: #d9edf7;
+}
+
+@each $item in $managetimeColWidths {
+	.managetime-col-#{$item} {
+		@include managetime-col-width(#{$item}px)
+	}
+}
+
+.managetime-approved {
+    color: #607d8b !important;
+}
+
+.managetime-disapprove {
+    color: #dd4b39 !important;
+}
+
+.managetime-unapprove {
+    color: #00a65a !important;
+}
+
+.managetime-cancelled {
+    color: #f39c12 !important;
+}
+
+.managetime-callout {
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    padding: 15px;
+}
+
+.managetime-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.callout-approved {
+    background-color: #b5bbc8 !important;
+    border-color: #0097bc;
+    color: #ffffff;
+}
+
+.callout-disapprove {
+    background-color: #dd4b39 !important;
+    border-color: #0097bc;
+    color: #ffffff;
+}
+
+.callout-unapprove {
+    background-color: #00a65a !important;
+    border-color: #0097bc;
+    color: #ffffff;
+}
+
+.callout-cancelled {
+    background-color: #f39c12 !important;
+    border-color: #0097bc;
+    color: #ffffff;
+}
+
+.managetime-text-right {
+    text-align: right;
+}
+
+.managetime-modal {
+    z-index: 2000;
+}
+
+.fancybox img {
+    margin-bottom: 10px;
+}
+
+.managetime-margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .table-responsive>.table>tbody>tr>td:not(.white-space-nowrap),
+    .table-responsive>.table>tbody>tr>th,
+    .table-responsive>.table>tfoot>tr>td,
+    .table-responsive>.table>tfoot>tr>th,
+    .table-responsive>.table>thead>tr>td,
+    .table-responsive>.table>thead>tr>th {
+        white-space: normal !important;
+    }
+}
+
+.managetime-table-control .form-control {
+    padding: 6px !important;
+    font-size: 13px !important;
+}
+
+.managetime-form-group {
+    .tooltip {
+        .tooltip-inner {
+            max-width: 400px !important;
+            text-align: left !important;
+            background-color: #3C8DBC !important;
+            padding-top: 15px !important;
+            padding-left: 0px !important;
+        }
+        .tooltip .tooltip-arrow {
+            border-top-color: #3C8DBC !important;
+        }
+    }
+}
+.padding-0 {
+    padding: 0px;
+}
+.content-header h1 {
+    word-break: break-word;
+}
+@media (min-width: 992px) {
+    .content-header h1 {
+        max-width: 70%;
+    }
+}
+div.tbl_container {
+    padding-left: 510px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.pdh-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.table-left {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 500px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.box ._me_table_responsive {
+    padding-left: 0;
+    padding-right: 0;
+}
+#_me_table, #_me_table td:last-child, #_me_table th:last-child {
+    border-left: none;
+}
+#me_table_container .filter-input-grid {
+    height: 60px;
+}
+#me_table_container .no-result {
+    height: 80px;
+}
+#top_fixed_head.top-fixed {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background: #fff;
+}
+#_me_table.dataTable tr td, #_me_tbl_left.dataTable tr td {
+    height: 43px;
+}
+._me_review_page {
+    position: relative;
+}
+.content-wrapper .content .box-primary {
+    padding: 0 !important; 
+}
+
+#mission_register {
+    .bootstrap-datetimepicker-widget {
+        .timepicker {
+            a[data-action="incrementMinutes"], a[data-action="decrementMinutes"] {
+                display: none;
+            }
+        }
+    }
+}
+
+.keeping-aggregate-page {
+    #_me_table {
+        td {
+            position: relative;
+            .edit-field {
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            .note {
+                background-color: #000;
+                color: #fff;
+                position: absolute;
+                padding: 5px;
+                width: 83px;
+                left: 100%;
+                z-index: 999;
+            }
+            .note-top {
+                top: 11px;
+            }
+            .note-bottom {
+                top: 44px;
+            }
+            .arrow-left {
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 5px solid #000;
+                position: absolute;
+                left: 92%;
+            }
+            .arrow-left-top {
+                top: 21px;
+            }
+            .arrow-left-bottom {
+                top: 55px;
+            }
+        }
+    }
+}
+
+.tooltip-white {
+    .tooltip {
+        .tooltip-inner {
+            ul {
+                padding-left: 22px;
+                li {
+                    ul {
+                        padding-left: 20px;
+                    }
+                    white-space: initial;
+                }
+            }
+        }
+    }
+}

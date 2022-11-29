@@ -1,0 +1,36 @@
+.dataTable th {
+    vertical-align: middle!important;
+    &:after {
+        top: 50%!important;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        bottom: auto !important;
+    }
+}
+/* generate width and min-width from 5,10,25,... to 150px */
+@for $i from 1 through 30 {
+    .w-#{5*$i} {
+        width: #{5*$i}px;
+    }
+    .min-w-#{5*$i} {
+        min-width: #{5*$i}px;
+    }
+}
+
+.candidate-bg-primary {
+    a {
+        color: white;
+    }
+    background-color: #3c8dbc;
+    color: white;
+    &:hover {
+        color: black;
+        a {
+            color: #3c8dbc;
+        }
+        a.btn-edit {
+            color: white;
+        }
+    }
+}
+

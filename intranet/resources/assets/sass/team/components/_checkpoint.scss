@@ -1,0 +1,583 @@
+@import 'checkpoint_emp/emp';
+
+.wrapper {
+    overflow-y: hidden !important;
+}
+
+.content-wrapper {
+    .content-header {
+        padding: 15px 0 0 0;
+        @media screen and (min-width: $largeScreen){
+            padding: 15px 15px 0 15px;
+        }
+        
+    }
+    
+    .content {
+        @extend .content-header;
+        padding-top: 15px;
+        .container {
+            padding: 0;
+            @media screen and (min-width: $largeScreen){
+                padding: 0 15px;
+            }
+        }
+        
+        .box-primary {
+            padding: 0 5px;
+        }
+        
+    }
+}
+
+/*.datepicker {
+    background-color: #ecf0f5 !important;
+}
+
+.datepicker table tr td.day:hover {
+    background: #fff;
+}
+
+.datepicker-dropdown:before {
+    border-top: 7px solid #ecf0f5 !important;
+}
+
+.datepicker-dropdown:after {
+    border-top: 7px solid #ecf0f5 !important;
+}*/
+
+/**
+* Checkpoit create page
+*/
+.checkpoint-create-page {
+    input[type=radio] {
+        opacity: 0;
+    }
+    .select2-selection__rendered {
+        font-size: 14px;
+    }
+    .select2-results__option {
+        font-size: 14px !important;
+    }
+    .start-date{
+        width: 99% !important;
+    }
+    .end-date {
+        width: 101% !important;
+    }
+    @media screen and (max-width: $largeScreen){
+        .start-date{
+            width: 100% !important;
+        }
+        .end-date {
+            width: 100% !important;
+        }
+    }
+    
+    
+    .checkpoint-create-body {
+        .evaluated-container {
+            .btn-group {
+                width: 100% !important;
+                .multiselect {
+                    width: 100% !important;
+                    background-color: #fff;
+                    .multiselect-selected-text {
+                        float: left;
+                    }
+                    .caret {
+                        float: right;
+                        margin-top: 7px;
+                        margin-right: -5px;
+                    }
+                }
+            }
+            ul.multiselect-container {
+                width: 100% !important;
+            }
+        }
+        label.error{
+            color:red;
+            font-size: 13px;
+            font-weight: 100;
+            display: inline-block;
+            margin-top: 5px;
+            position: absolute;
+            bottom: -28px;
+        }
+        padding-right: 15px;
+        padding-left: 15px;
+        input[type=text] {
+            display: inline-block;
+            border-radius: 3px; 
+        }
+        
+        select {
+            display: inline-block;
+            border-radius: 3px; 
+        }
+        
+        .form-group {
+            margin-top: 30px;
+        }
+        
+        .sama_label{
+            position: absolute;
+            top: 8px;
+            left: 85%;
+            @media screen and (min-width: $largeScreen){
+                left: 88%;
+            }
+        }
+
+        .radio-inline {
+            padding-left: 0;
+        }
+        
+        .icheckbox-container {
+            width: 100%;
+            display: inline-block;
+        }
+        
+        .required {
+            color: red;
+            margin-left: 2px;
+        }
+        
+        .container-button-css{
+            text-align: center;
+            button{
+                padding: 5px 35px;
+            }
+        }
+        
+        .rikker-relate-container {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding-left: 12px;
+            
+            #rikker_relate {
+                border: none;
+                width: 250px;
+                padding: 0;
+                position: relative;
+                top: 0;
+                height: 32px;
+            }
+            
+            .rikker-relate-update{
+                top: -3px !important;
+                height: 26px !important;
+                margin-top: 5px;
+            }
+            
+            .rikker-set {
+                position: relative;
+                top: 3px;
+                display: none;
+                .vN {
+                    background-color: #f5f5f5;
+                    border: 1px solid #d9d9d9;
+                    cursor: default;
+                    display: inline-block;
+                    height: 26px;
+                    white-space: nowrap;
+                    -webkit-border-radius: 3px;
+                    border-radius: 3px;
+                    padding: 2px 2px 3px 2px;
+                    margin-right: 2px;
+                    .vT {
+                        display: inline-block;
+                        color: #222;
+                        margin: 2px 5px;
+                        max-width: 325px;
+                        max-height: 17px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        direction: ltr;
+                        cursor: move;
+                    }
+
+                    .vM {
+                        display: inline-block;
+                        width: 14px;
+                        height: 20px;
+                        background: no-repeat url(../../../common/images/contactarea_sprite_2.gif) -4px 0;
+                        opacity: .6;
+                        vertical-align: top;
+                        cursor: pointer;
+                    }
+                }
+
+                .error {
+                    background-color: #fff;
+                    border: none;
+                    .vT{
+                        border-bottom: 1px dotted red;
+                    }
+                }
+            }
+        }
+        
+        .rikker-pm-container {
+            @extend .rikker-relate-container;
+            #pm_email {
+                border: none;
+                width: 250px;
+                padding: 0;
+                position: relative;
+                top: 0;
+                height: 32px;
+            }
+            .pm-email-update {
+                top: -3px !important;
+                height: 26px !important;
+            }
+        }
+        
+        .rikker-result {
+            display:none;
+            border: 1px solid #d2d6de;
+            position: absolute;
+            width: 300px;
+            z-index: 999;
+            background-color: #fff;
+            left: 12px;
+            border-radius: 3px;
+            .rikker-item {
+                padding: 5px;
+                float: left;
+                width: 100%;
+                padding: 5px;
+                cursor: default;
+                p {
+                    margin-bottom: 0 !important;
+                }
+            }
+            .rikker-item:hover {
+                background-color: #ececec;
+            }
+            
+            .hovered {
+                background-color: #ececec;
+            }
+        }
+        
+        
+        
+        .date {
+            position: relative; 
+            left: -1px;
+            border-radius: 0 4px 4px 0 !important;
+            
+        }
+        
+        .input-group  {
+            @media screen and (max-width: $largeScreen){
+                margin-top: 10px;
+            }
+        }
+        
+        #start_date-error {
+            position: absolute;
+            bottom: -27px;
+            left: 0;
+        }
+        
+        #end_date-error {
+            @extend #start_date-error;
+            
+        }
+        
+        #pm_email_validate-error {
+            bottom: -10px !important;
+        }
+        
+        #rikker_relate_validate-error {
+            bottom: -10px !important;
+        }
+        
+        .btn-create {
+            margin: 40px 0;
+        }
+    }
+    
+    .container-fluid .row-fluid button.btn-next{
+        float: right; 
+        background-color: #690F8E; 
+        padding: 3px 28px;
+    }
+
+    /* hien popup chon team vao css */
+    .css-create-page .modal-dialog, .css-update-page .modal-dialog{
+        width: 400px !important;
+    }
+
+    #frm-add-teams{
+        text-align: center;
+    }
+
+    .container-teams{
+        width:200px; 
+        height:300px;
+        background: #6e6e6e;
+        float:left;
+    }
+
+    .btn-add-team{
+        position: relative;
+        top:134px;
+        margin:0 16px; 
+        padding: 5px 15px;
+        border: none;
+        color: #fff;
+        float: left;
+        font-weight: bold;
+        background: -webkit-linear-gradient(#929292, #000); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#929292, #000); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#929292, #000); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#929292, #000); /* Standard syntax */
+    }
+
+    .css-create-page .modal-body, .css-update-page .modal-body{
+        font-size: 12px;
+        overflow-y: auto;
+        height: 400px;
+    }
+
+    
+    
+    .modal-header{
+        background-color:#3c8dbc; 
+        border-bottom: 1px solid #d2d6de !important;
+        .modal-title{
+            color: #fff ;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .modal-footer{
+        border-top: 1px solid #3c8dbc !important;
+        button.create-css{
+            color: #000 ; 
+            font-weight: bold; 
+            background: #e3b019 ; 
+            padding: 3px 25px;    
+            margin-top: 10px;
+        }   
+    }
+
+    .modal-body{
+        ul.list-teams{
+            padding: 10px;
+            list-style: none;
+            text-align: left;
+            color: #fff;
+            font-weight: bold;
+            li{
+                cursor: pointer;
+                padding: 3px;
+            }
+        }
+        .remove-team{
+            margin-bottom: 10px;
+            text-align: right;
+            img{
+                cursor: pointer;
+            }
+        }
+    } 
+
+    .container-date{
+        position: relative;
+        display: inline;
+        #start_date-error{    
+            position: absolute;
+            top:43px;
+            left:0;
+        }
+        #end_date-error{    
+            @extend #start_date-error;
+        }
+    }
+
+    #team_id_check-error{
+        display: block;
+    }
+    
+    #pm_email_check-error {
+        bottom: -8px !important;
+    }
+    
+    #rikker_relate_check-error {
+        bottom: -8px !important;
+    }
+    
+    #pm_email_jp-error {
+        @media screen and (max-width: $mediumScreen){
+            bottom: -43px !important;
+        }
+    }
+}
+
+/**
+* CSS preview page
+*/
+
+.preview-page {
+    .preview-body {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    #link-make {
+        text-align: center;
+        text-decoration: underline;
+        color: #3c8dbc;
+    }
+    
+    .preview-title {
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    
+    .btn-update-css {
+        font-size: 18px;
+    }
+}
+
+/**
+* CSS detail page
+*/
+
+.detail-css-page {
+    padding-top: 10px;
+    margin-top: 10px;
+    @media screen and (min-width: $largeScreen){
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    
+    #make-header {
+        margin-top: 10px;
+        .title {
+            font-size: 17px !important;
+            @media screen and (min-width: $mediumScreen){
+                font-size: 26px  !important;
+            }
+            @media screen and (min-width: $largeScreen){
+                font-size: 45px  !important;
+            }
+        } 
+    }    
+}
+
+.team-tree{
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 30px;
+    text-align: left;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-body .right-list a{
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal-body .right-list label{
+    width:100%;
+}
+
+.rate{
+    text-align: center;
+}
+
+.title-label{
+    width: 90px;
+    display: inline-block;
+}
+
+.label-normal{
+    font-weight: normal;
+}
+
+
+
+.small-title{
+    font-size:15px;
+}
+
+
+.dataTables_paginate{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.projecttype-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.root-category{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category{
+    font-weight: bold;
+}
+
+.loading-img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 35px;
+}
+
+.myHeading{
+    border:none;
+    font: 18px Roboto;
+    padding-left:10%;
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../../../common/images/Preloader_11.gif) center no-repeat #fff;
+}
+
+.checkpoint-detail-page {
+    .container-question-child {
+        &.btn-primary {
+            color: #fff !important;
+        }
+        &.btn-danger {
+            color: #fff !important;
+        }
+    }
+    .total-point {
+        font-size: 35px!important;
+    }
+    .point-container {
+        width: 100%; 
+        float:right;
+        @media screen and (min-width: $bigScreen){
+            width: auto;
+        }
+    }
+}
+
+.comment {
+    -webkit-transform: inherit !important;
+    transform: inherit !important;
+    top: 0 !important;
+}

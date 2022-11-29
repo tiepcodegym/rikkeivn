@@ -1,0 +1,13 @@
+{
+    "name": "rikkei/core",
+    "description": "Core module for Rikkei Intranet System",
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/socialite": "~2.0.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\Core\\": "src"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Chào <strong>&#123;&#123; name &#125;&#125;,</strong></span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Chúc mừng sinh nhật Người anh em!</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Rikkeisoft vui mừng được cùng gia đình, bạn bè gửi những lời chúc tốt đẹp tới Bạn trong ngày ý nghĩa này. Chúng tôi hy vọng Bạn có một sinh nhật tràn ngập niềm vui và tiếng cười bên những người thân yêu.</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Những dịp trò chuyện với bạn đã để lại cho chúng tôi ấn tượng về một con người ... (tài năng, nhiệt tình, có trách nhiệm với công việc, đam mê với nghề, nghiêm túc với nghề, năng động, giàu năng lượng, chân thành, giàu kinh nghiệm, etc). Chúng tôi tin tưởng với những gì Bạn thể hiện Bạn hoàn toàn có khả năng chinh phục các mục tiêu của bạn thân và chạm đích thành công trong tương lai không xa.</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Hãy luôn giữ ngọn lửa ấy trong mình và cùng Chúng tôi viết tiếp giấc mơ của những người Việt trẻ.</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Chúng tôi chúc Bạn mọi điều tốt lành trên con đường sắp tới.</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Hy vọng có cơ hội được chào đón Bạn tại mái nhà Rikkeisoft!</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Trân trọng,</span></span></p>
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><strong>Công ty cổ phần Rikkeisoft</strong></span></span></p>

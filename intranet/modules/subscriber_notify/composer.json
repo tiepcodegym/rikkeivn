@@ -1,0 +1,12 @@
+{
+    "name": "rikkei/subscriber_notify",
+    "description": "Module api subscriber",
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikkei\\SubscriberNotify\\": "src"
+        }
+    }
+}

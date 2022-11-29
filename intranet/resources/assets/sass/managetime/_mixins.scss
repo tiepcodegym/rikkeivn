@@ -1,0 +1,6 @@
+@import "mixins/functions";
+
+@mixin display_flex {
+    display: flex;
+    display: -ms-flexbox;
+}

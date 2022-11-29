@@ -1,0 +1,29 @@
+@mixin padding-left($px) {
+	padding-left: $px !important;
+}
+@mixin width($px) {
+	width: $px;
+}
+@mixin margin-bottom($px)
+{
+	margin-bottom: $px;
+}
+
+@mixin margin-top($px) {
+	margin-top: $px;
+}
+
+@mixin font-size($px) {
+	font-size: $px;
+}
+
+@mixin bgColor($bgColor) {
+    background-color: $bgColor;
+}
+
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+}

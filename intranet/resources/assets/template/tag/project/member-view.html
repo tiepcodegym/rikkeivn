@@ -1,0 +1,24 @@
+<tr data-member-id="">
+    <td ng-bind="::projectItemRelate.member[itemMemberId].key"
+        class="text-right"></td>
+    <td ng-bind="::projectItemRelate.member[itemMemberId].typeText"></td>
+    <td ng-bind="::projectItemRelate.member[itemMemberId].account"></td>
+    <td ng-bind="::projectItemRelate.member[itemMemberId].prog_lang"></td>
+    <td ng-bind="::projectItemRelate.member[itemMemberId].start_at"></td>
+    <td ng-bind="::projectItemRelate.member[itemMemberId].end_at"></td>
+    <td class="text-right" ng-bind="::projectItemRelate.member[itemMemberId].effort"></td>
+    <td class="text-right" ng-bind="::projectItemRelate.member[itemMemberId].flat_resource"></td>
+    <td>
+        <button class="btn-add type-edit" type="button"
+                ng-disabled="disabledProjMemberBtn"
+                ng-click="funcProjMemberAdd($event)">
+            <i class="fa fa-pencil-square-o"></i>
+        </button>
+        <button class="btn-delete type-delete" 
+                ng-click="funcProjMemberRemove($event)"
+                ng-disabled="disabledProjMemberBtn" type="button">
+            <i class="fa fa-trash-o ajax-main-content"></i>
+            <i class="fa fa-spin fa-refresh hidden ajax-loading"></i>
+        </button>
+    </td>
+</tr>

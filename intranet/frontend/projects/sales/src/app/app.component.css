@@ -1,0 +1,56 @@
+a {
+    cursor: pointer;
+}
+.value {
+    background: #f0f0f0;
+    padding: 8px 13px;
+    white-space: pre-wrap;
+    min-height: 35px;
+}
+.margin-right-5 {
+    margin-right: 5px;
+}
+.margin-top-5 {
+    margin-top: 5px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+.form-group .error {
+    margin-top: 5px;
+}
+.minw-230 {
+    min-width: 230px;
+}
+.account-desc {
+    font-size: 12px;
+}
+.cv-note-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.cv-note.value {
+    background: #fbfbfb;
+}
+.loadmore-btn {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+.note-actions a {
+    display: inline-block;
+    margin: 0 0 5px 10px;
+}
+.margin-top-0 {
+    margin-top: 0;
+}
+.cv-author strong {
+    color: #2291f1;
+}
+.account-desc {
+    color: #e0a244;
+}
+.note-actions {
+    margin-right: 10px;
+}

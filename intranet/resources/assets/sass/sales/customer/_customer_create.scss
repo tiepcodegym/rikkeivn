@@ -1,0 +1,24 @@
+@import "mixins";
+
+.width-90 {
+	@include width-percent(90%);
+}
+.width-93 {
+	@include width-percent(93%);
+}
+.margin-bottom-30 {
+	@include margin-bottom(30px);
+}
+.input-box-img-preview {
+	.image-preview {
+		@include width-percent(22%);
+	}
+}
+
+textarea {
+    resize: vertical;
+}
+.text-language {
+	color:red;
+	margin-top:5px;
+}

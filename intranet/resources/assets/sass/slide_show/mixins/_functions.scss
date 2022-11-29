@@ -1,0 +1,98 @@
+@mixin padding-left($px) {
+	padding-left: $px !important;
+}
+@mixin width($px) {
+	width: $px;
+}
+@mixin margin-bottom($px)
+{
+	margin-bottom: $px;
+}
+
+@mixin margin-top($px) {
+	margin-top: $px;
+}
+
+@mixin font-size($px) {
+	font-size: $px;
+}
+
+@mixin margin-left($px) {
+	margin-left: $px;
+}
+
+@mixin left($px) {
+	left: $px;
+}
+
+@mixin height($px) {
+	height: $px;
+}
+
+@mixin min-height($px) {
+	min-height: $px;
+}
+
+@mixin padding($px) {
+	padding: $px;
+}
+
+@mixin margin($px) {
+	margin: $px;
+}
+
+@mixin padding-top ($px) {
+	padding-top: $px;
+}
+
+@mixin font-size($px) {
+	font-size: $px;
+}
+
+@mixin background($color) {
+	background: $color;
+}
+
+@mixin border-radius($color) {
+	border-radius: $color;
+}
+
+@mixin padding-right($px) {
+	padding-right: $px;
+}
+
+@mixin padding-bottom($px) {
+	padding-bottom: $px;
+}
+
+@mixin margin-bottom($px) {
+	margin-bottom: $px;
+}
+
+@mixin text-indent($px) {
+	text-indent: $px;
+}
+
+@mixin margin-right($px) {
+	margin-right: $px;
+}
+
+@mixin max-width($px) {
+	max-width: $px;
+}
+
+@mixin border-radius($px) {
+	border-radius: $px;
+}
+
+@mixin right($px) {
+	right: $px;
+}
+
+@mixin border-color($color) {
+	border-color: $color;
+}
+
+@mixin border($item) {
+	border: $item;
+}

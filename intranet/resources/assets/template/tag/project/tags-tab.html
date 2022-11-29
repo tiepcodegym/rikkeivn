@@ -1,0 +1,29 @@
+<div class="row form-group" 
+     ng-if="globTag.permissApprove"
+     style="border-bottom: 1px solid #ddd;">
+    <div class="col-md-6 col-lg-5">
+        <div ng-include="'tag_assignee.html'"></div>
+    </div>
+</div>
+
+<div id="project_tags_form">
+    
+    <div ng-include="'tag_template.html'"></div>
+
+    <div class="text-right" ng-if="fieldSelected || !isSearchPage">
+        <span ng-if="checkShowBtnSubmitTag(editItem, 'submit')">
+            <button type="button" class="btn btn-primary"
+                ng-click="submitEditTag(editItem, $event)"><%= trans['Submit'] %>
+                <i class="fa fa-spin fa-refresh" ng-show="editItem.loading"></i>
+            </button>
+        </span>
+        <span ng-if="checkShowBtnSubmitTag(editItem, 'approve')">
+            <button type="button" class="btn btn-primary"
+                ng-click="approveTag(editItem, $event)"><%= trans['Submit'] %>
+                <i class="fa fa-spin fa-refresh" ng-show="editItem.loading"></i>
+            </button>
+        </span>
+    </div>
+    
+</div>
+

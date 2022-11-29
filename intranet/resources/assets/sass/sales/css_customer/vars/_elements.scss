@@ -1,0 +1,33 @@
+/** 
+* Font color welcome page
+*/
+$colorRed: #be1e2d;
+$colorGreen: #43a047;
+$colorLightGreen: #82c785;
+$colorGray: #8c9a9c;
+$colorBlue: #2b98d4;
+$colorLightBlue: #58c1ef;
+
+/** 
+* Font size welcome page
+* Medium: welcome line text
+* Normal: make information text
+* Small: footer text
+* Smallest: policy in footer text
+*/
+$welcomeFontSizeMedium: 15.82pt;
+$welcomeFontSizeNormal: 13pt;
+$welcomeFontSizeSmall: 9pt;
+$welcomeFontSizeSmallest: 8pt;
+
+/**
+* Screen width
+*/
+
+//Medium screen width
+$mediumScreen: 480px;
+//Large screen width
+$largeScreen: 768px;
+//Big screen width
+$bigScreen: 992px;
+$veryBigScreen: 1600px;

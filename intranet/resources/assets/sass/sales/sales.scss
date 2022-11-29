@@ -1,0 +1,29 @@
+@import "css_customer/customer";
+@import "components/vars";
+@import "components/elements";
+@import "components/css";
+
+.create-company-page {
+    .form-center {
+        width: auto;
+        @media screen and (min-width: $bigScreen){
+            width: 900px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.child-cate{
+    display: flex;
+    .cate-des-left{
+        flex: 0 0 33%;
+        max-width: 33%;
+        width: 33%;
+        padding-right: 20px;
+        border-right: 1px solid #ccc;
+    }
+    .cate-des-right{
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+}

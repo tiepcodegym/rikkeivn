@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".date").datepicker({todayBtn:"linked",language:"it",autoclose:!0,todayHighlight:!0,format:"yyyy-mm-dd"}),$("#birthday").datepicker("setEndDate","-1d")});

@@ -1,0 +1,391 @@
+.candidate-create-page {
+    .required {
+        position: initial !important;
+    }
+    textarea {
+        resize: vertical;
+    }
+    #form-create-candidate {
+        .form-group {
+            label.error {
+                bottom: -25px;
+            }
+        }
+    }
+}
+
+.request-detail-page {
+    .request-detail-link {
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        @media screen and (min-width: $mobileScreen){
+            bottom: 5px;
+        }
+        a {
+            color: #444;
+        }
+    }
+    #form-interview-candidate {
+        label.checkbox {
+            margin-left: 25px;
+        }
+        .btn-interview {
+            .tooltip {
+                .tooltip-inner {
+                    white-space: unset;
+                }
+            }
+        }
+    }
+}
+
+.invite-letter-body {
+    font-family: DejaVu Sans, sans-serif;
+    text-align: justify;
+    .header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: -60px;
+        padding: 40px;
+        font-size: 12px;
+        .container {
+            padding-bottom: 20px;
+            border-bottom: 2px solid;
+            padding-left: 0;
+            .logo {
+                padding: 0;
+                img {
+                    width: 133px;
+                    margin-left: -15px;
+                }
+            }
+            .company-info {
+                padding-left: 60px;
+            }
+        }
+    }
+           
+    .body {
+        padding: 25px;
+        padding-top: 40px; 
+        line-height: 22px;
+        ul  {
+            padding-left: 0;
+            line-height: 22px;
+            li {
+               list-style: none;
+            }
+        }
+    }       
+}
+
+.candidate-detail-page {
+    textarea {
+        resize: vertical;
+    }
+    .old-company {
+        max-height: 106px;
+        overflow-y: auto;
+    }
+    input[type=text], input[type=file], textarea, select {
+        width: 100%;
+    }
+    .input-group {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        .input-group-addon {
+            background-color: #eee;
+        }
+        .form-control:last-child {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+    }
+    .form-candidate-detail {
+        width: 100%;
+        margin: auto;
+        @media screen and (min-width: $largeScreen){
+            width: 1000px;
+        }
+        .form-group {
+            margin-top: 0!important;
+            .control-label {
+                font-weight: 700!important;
+            }
+            label.error {
+                bottom: -22px;
+            }
+        }
+        .btn-group {
+            width: 100%!important;
+        }
+    }
+    .form-contact {
+        @media screen and (min-width: $largeScreen){
+            width: 750px;
+        }
+    }
+    .employee-code-form {
+        margin-top: 7px;
+        display: inline-block;
+    }
+    #modal-calendar-confirm {
+        .modal-dialog {
+            width: 90%;
+            @media screen and (min-width: $bigScreen){
+                width: 800px;
+            }
+        }
+    }
+    #modal-calendar-create {
+        .modal-dialog {
+            width: 90%;
+            @media screen and (min-width: $bigScreen){
+                width: 800px;
+            }
+        }
+        #calendar-title {
+            height: 50px;
+            font-size: 20px;
+        }
+        .loading-room {
+            position: absolute;
+            top: 11px;
+            right: 30px;
+        }
+        .input-required {
+            border-left: 4px solid red;
+        }
+        .end-date-group {
+            margin: 10px 0;
+            @media screen and (min-width: $bigScreen){
+                margin: 0;
+            }
+        }
+        .select-container {
+            margin-top: 18px;
+            @media screen and (min-width: $bigScreen){
+                padding-left: 15px;
+                margin-top: 0;
+            }
+        }
+        .loader-container {
+            background: none;
+            opacity: 1;
+            padding-left: 15px;
+            .loader {
+                width: 40px;
+                height: 40px;
+                border: 5px solid #f3f3f3;
+                border-top: 5px solid #3498db;
+                left: unset;
+            }
+        }
+    }
+}
+
+.select-group-full{
+    .btn-group{
+        width: 100%!important;
+    }
+    .btn.multiselect{
+        border-radius: 0!important;
+    }
+}
+
+#offer_pass_collapse {
+    label.error{
+        position: static;
+    }
+}
+
+.right-link {
+    a {
+        color: #444;
+        &:hover {
+            color: #999;
+        }
+    }
+}
+
+.schedule-table {
+    .table-bordered>thead>tr>th, 
+    .table-bordered>tbody>tr>th, 
+    .table-bordered>tfoot>tr>th, 
+    .table-bordered>thead>tr>td, 
+    .table-bordered>tbody>tr>td, 
+    .table-bordered>tfoot>tr>td {
+        border: 1px solid #e6e6e6;
+        border-bottom-width: 0;
+        border-left-width: 0;
+    }
+}
+
+#test-history-modal {
+    .modal-dialog {
+        width: 95%;
+        @media screen and (min-width: $bigScreen){
+            width: 800px;
+        }
+    }
+    .modal-header {
+        background: #00a7d0;
+        color: #fff;
+    }
+    #test-history-table {
+        th {
+            padding: 10px 15px;
+        }
+    }
+    #test-history-table {
+        width: 800px !important;
+        @media screen and (min-width: $bigScreen){
+            width: 100% !important;
+        }
+    }
+}
+#test-ricode-modal {
+    @extend #test-history-modal
+}
+
+.modal-view-file {
+    .modal-dialog {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        .modal-content {
+            height: 100%;
+            .modal-body {
+                height: 100%;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+                .disabled-view-full {
+                    background-color: #d1d1d1; 
+                    height: 42px; 
+                    position: absolute; 
+                    right: 26px; 
+                    top:27px; 
+                    width: 42px;
+                    z-index: 2147483647;
+                    a {
+                        color: #000;
+                        .fa-download {
+                            transform: scale(3,3);
+                            top: 15px;
+                            position: relative;
+                            left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#_modal_confirm {
+    .btn-outline {
+        &:hover {
+            background: #db8b0b;
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+}
+
+.apply-history {
+    .viewing {
+        color: #fff !important;
+        background-color: #a61c0d;
+    }
+}
+.multiselect-container.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+#form-interview-candidate .position-relative .btn-group {
+    width: 100% !important;
+}
+
+#form-interview-candidate .interview_note {
+    margin-top: 10px;
+}
+
+#form-interview-candidate .submit_interview {
+    margin: auto;
+}
+
+#comment.error {
+    border: 1px solid #e80918;
+}
+.input-group.field-error {
+    margin-bottom: 20px;
+}
+.frm-modal {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.btn-mailing {
+    height: 35px;
+    min-width: 195px;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.input-group-btn {
+    .tooltip {
+        min-width: 300px;
+    }
+}
+
+.level-rikkei-code {
+    display: none;
+}
+.candidate-detail-page {
+    .input-ricode {
+        .error {
+            position: static !important;
+        }
+    }
+}
+#test-ricode-modal {
+    #form-ricode-test {
+        .modal-footer {
+            button[name=action-is-create] {
+                display: none;
+            }
+            button[name=action-is-update] {
+                display: initial;
+            }
+        }
+    }
+}
+
+.choose_file {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    border: #ebebeb solid 1px;
+    width: 250px;
+    padding: 4px 6px 4px 8px;
+    font: normal 14px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #7f7f7f;
+    margin-top: 2px;
+    background: white;
+    margin-right: 5px;
+}
+
+.choose_file input[type="file"] {
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

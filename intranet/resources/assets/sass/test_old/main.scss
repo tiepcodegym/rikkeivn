@@ -1,0 +1,111 @@
+.clearf {
+  clear: both;
+}
+.clearf:after,
+.clearf:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.sizing-border {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+.sizing-content {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -o-box-sizing: content-box;
+}
+.display_flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+}
+body,
+html {
+  font-size: 14px;
+  background: url(../../common/images/login-background.png) no-repeat;
+  background-size: cover;
+}
+.logo-box {
+  text-align: center;
+  padding: 50px 0;
+}
+.logo-box a, .logo-box img {
+  display: inline-block;
+}
+#logo {
+  max-height: 100px; margin-bottom: 4px;
+  max-width: 100%;
+  width: auto;
+}
+.single-title {
+  font-size: 1.7rem;
+}
+.test-page .single-title {
+  margin-top: -34px;
+  margin-bottom: 10px;
+}
+.test-page #logo {
+  max-height: 32px;
+}
+.test-page .logo-box {
+  padding: 10px 0 0;
+}
+.test-page .page-header {
+  clear: both; position: relative;
+}
+.test-page .page-header:after,
+.test-page .page-header:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.btn-start{
+    position: absolute; top: -1px; right: 110px; z-index: 1001;
+}
+.iframe-show {
+  width: 100%;
+  min-height: calc(100vh - 65px);
+}
+#header {
+  position: relative;
+}
+#accout_box {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.btn-flickr{
+    animation: _fr_flicker 1s infinite;
+    -webkit-animation: _fr_flicker 1s infinite;
+    -moz-animation: _fr_flicker 1s infinite;
+    -o-animation: _fr_flicker 1s infinite;
+}
+@keyframes _fr_flicker {
+    0% {background: #ff0000;}
+    50% {background: #f0ad4e;}
+    100% {background: #ff0000;}
+}
+@-webkit-keyframes _fr_flicker {
+    0% {background: #ff0000;}
+    50% {background: #f0ad4e;}
+    100% {background: #ff0000;}
+}
+@-o-keyframes _fr_flicker {
+    0% {background: #ff0000;}
+    50% {background: #f0ad4e;}
+    100% {background: #ff0000;}
+}
+@-moz-keyframes _fr_flicker {
+    0% {background: #ff0000;}
+    50% {background: #f0ad4e;}
+    100% {background: #ff0000;}
+}
+@media screen and (max-width: 768px) {
+  .test-page .single-title {
+    margin-top: 0;
+  }
+}

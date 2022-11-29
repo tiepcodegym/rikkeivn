@@ -1,0 +1,35 @@
+.form-delete {
+    display: inline-block;
+}
+em {
+    color: red;
+}
+
+.td-button {
+    min-width: 100px;
+}
+
+table thead tr th {
+    vertical-align: middle !important;
+}
+
+table thead tr th:after {
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1540px)
+{
+    table thead tr th {
+        vertical-align: middle !important;
+    }
+
+    table thead tr th:after {
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    bottom: initial !important;
+}

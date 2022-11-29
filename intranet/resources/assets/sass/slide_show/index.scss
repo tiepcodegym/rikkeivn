@@ -1,0 +1,162 @@
+/* I wanted to center my loader */
+#cycle-loader {
+    height:32px;
+    left:50%;
+    margin:-8px 0 0 -8px;
+    position:absolute;
+    top:50%;
+    width:32px;
+    z-index:999;
+}
+
+/*I want to avoid jumpiness as the JS loads, so I initially hide my cycle*/
+#maximage {
+    display:none;/* Only use this if you fade it in again after the images load */
+    position:fixed !important;
+}
+
+/*Set my gradient above all images*/
+#gradient {
+    left:0;
+    height:100%;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:999;
+}
+
+/*Set my logo in bottom left*/
+#logo {
+    bottom:30px;
+    height:auto;
+    left:30px;
+    position:absolute;
+    max-width: 70%;
+    z-index:1000;
+}
+#logo img {
+    width:100%;
+}
+
+#arrow_left, #arrow_right {
+    bottom:30px;
+    height:67px;
+    position:absolute;
+    right:30px;
+    width:36px;
+    z-index:1000;
+}
+#arrow_left {
+    right:86px;
+}
+
+#arrow_left:hover, #arrow_right:hover {
+    bottom:29px;
+}
+#arrow_left:active, #arrow_right:active {
+    bottom:28px;
+}
+
+a {color:#666;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.in-slide-content { 
+    color:#333;
+    float:right;
+    font-family:'Helvetica Neue', helvetica;
+    font-size:60px;
+    font-weight:bold;
+    right:0;
+    margin:40px;
+    padding:20px;
+    position:absolute;
+    top:0;
+    width:700px;
+    z-index:9999; /* Show above .gradient */
+    text-shadow: 0 1px 0 #fff;
+    -webkit-font-smoothing:antialiased;
+}
+.light-text {color:#ddd;text-shadow: 0 1px 0 #666;}
+.smaller-text {font-size:30px;}
+.youtube-video, video {
+    left:0;
+    position:absolute;
+    top:0;
+}
+
+#maximages {
+    video {
+        position: fixed; right: 0; bottom: 0;
+        min-width: 100%; min-height: 100%;
+        width: auto !important; height: auto !important; z-index: -100;
+        background-size: cover;
+    }
+}
+
+.box-title {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,cbebff+35,a1dbff+100 */
+    background: rgb(240,249,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 35%, rgba(161,219,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 35%,rgba(161,219,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 35%,rgba(161,219,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+    padding: 15px;
+    border-radius: 5px;
+    p {
+        color: #7a7c7f;
+        color: #d54d7b;
+        font-family: "Great Vibes", cursive;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: normal;
+        text-align: center;
+        text-shadow: 0 1px 1px #fff;
+    }
+}
+
+.video {
+    video {
+        position: fixed; right: 0; bottom: 0;
+        min-width: 100%; min-height: 100%;
+        width: auto !important; height: auto !important; z-index: -100;
+        background-size: cover;
+    }
+}
+
+.container > div {
+    max-width: none;
+    padding-bottom: 0px;
+    #wowslider-container1 {
+        max-height: none ;
+        max-width: none;
+        .ws_images {
+            max-height: none;
+            max-width: none;
+        }
+        .ws_controls {
+            a {
+                display: none;
+            }
+        }
+        .ws-title {
+            font: 4.5em 'Play', Verdana, Geneva, sans-serif;
+            bottom: 5em;
+        }
+    }
+}
+body {
+    padding-top: 0px;
+    .container {
+        padding-bottom: 0px;
+    }
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#wowslider-container1 .ws-title span {
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.6) !important;
+}
